@@ -1,0 +1,246 @@
+.wrap .m-pro-exp{
+	width:1108px;
+	margin:28px auto 0;
+	background:#fff;
+	border-radius:5px;
+	overflow:hidden;
+	border:1px solid #d5dee5;
+}
+.wrap .m-pro-exp h1{
+	width:1108px;
+	height:50px;
+	color:#fff;
+	background:#009de0;
+	line-height:50px;
+	text-indent:33px;
+}
+.wrap .m-pro-exp .exp_left{
+	float:left;
+	width:848px;
+}
+.wrap .m-pro-exp .exp_left .box{
+	margin: 8px;
+	padding:0px 15px 0 0;
+	height:314px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.wrap .m-pro-exp .exp_left .box .left,
+.wrap .m-pro-exp .exp_left .box .right{
+	clear:both;
+	margin-bottom:10px;
+}
+.wrap .m-pro-exp .exp_left .box .left .text{
+    width: 100%;
+    font-size: 14px;
+    word-wrap: break-word;
+    word-break: normal;
+    margin-top: 5px;
+    color: #000002;
+    text-align: left;
+    position:relative;
+}
+.wrap .m-pro-exp .exp_left .box .left .text i{
+    position: absolute;	
+	top: 5px;
+    left: 1px;
+    border: 5px solid transparent;
+    border-right-color: #d0d7df;
+    border-top-color: #d0d7df;
+}
+.wrap .m-pro-exp .exp_left .box .left .text span{
+    padding: 6px 15px;
+    background: #d0d7df;
+    line-height: 26px;
+    text-align: left;
+    display: inline-block;
+    border-radius: 8px;
+    margin-left: 9px;
+    min-width: 50px;
+    max-width:550px;
+    font: 14px "微软雅黑","Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.wrap .m-pro-exp .exp_left .box .left .text span a{
+	font-size:14px;
+	color:#428BCA;
+	text-decoration:none;
+}
+.wrap .m-pro-exp .exp_left .box .left .text span a:hover{
+	text-decoration:underline;
+}
+.wrap .m-pro-exp .exp_left .box .right .text{
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+    word-wrap: break-word;
+    word-break: normal;
+    margin-top: 5px;
+    color: #fff;
+    text-align: right;
+    position:relative;
+}
+.wrap .m-pro-exp .exp_left .box .right .text i{
+    position: absolute;
+    top: 5px;
+    right: 1px;
+    border: 5px solid transparent;
+    border-left-color: #86d152;
+    border-top-color: #86d152;
+}
+.wrap .m-pro-exp .exp_left .box .right .text span{
+    padding: 6px 15px;
+    background: #86d152;
+    line-height: 26px;
+    text-align: left;
+    display: inline-block;
+    border-radius: 8px;
+    margin-right: 9px;
+    min-width: 50px;
+    max-width:550px;
+    font: 14px "微软雅黑","Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.wrap .m-pro-exp .exp_left .box .center_box{
+	padding: 10px 15px;
+	background: #D0D7DF;
+	width: 365px;
+	border-radius: 5px;
+	position: relative;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+.wrap .m-pro-exp .exp_left .box .center_box i{
+	position: absolute;
+    top: 5px;
+    left: -9px;
+    border: 5px solid transparent;
+    border-right-color: #d0d7df;
+    border-top-color: #d0d7df;
+}
+.wrap .m-pro-exp .exp_left .box .center{
+	margin:0;
+	width:365px;
+	border-radius: 5px;
+	overflow:hidden;
+	background:#fff;
+    border: 1px solid #6b747a;
+}
+.wrap .m-pro-exp .exp_left .box .center .head{
+	position:relative;
+	height:97px;
+}
+.wrap .m-pro-exp .exp_left .box .center .head_img{
+	position:absolute;
+	top:0;left:0;
+	width:365px;
+	height:97px;
+	overflow:hidden;
+}
+.wrap .m-pro-exp .exp_left .box .center .head_text{
+	position:absolute;
+	bottom:0;
+	left:0;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    width:365px;
+    height:30px;
+    line-height: 30px;
+    text-indent:17px;
+    z-index:5;
+}
+.wrap .m-pro-exp .exp_left .box .center .center_text{
+	overflow:hidden;
+	padding:5px 10px 5px 10px;
+	border-bottom:1px solid #d7d7d7;
+}
+.wrap .m-pro-exp .exp_left .box .center .center_text:last-child{
+	border-bottom: none;
+}
+.wrap .m-pro-exp .exp_left .box .center .center_text .center_lf{
+	width:300px;
+	float:left;
+	font-size:14px;
+	line-height: 20px;
+	color:#808080;
+}
+.wrap .m-pro-exp .exp_left .box .center .center_text .center_rt{
+	float:right;
+}
+.wrap .m-pro-exp .exp_left .box .center .center_text .center_rt img{
+	width:38px;
+	height:38px;
+	display:block;
+	max-width:38px;
+}
+.wrap .m-pro-exp .exp_left .text_btn{
+	border-top: 1px solid #d6dfe6;
+	height:130px;
+}
+.wrap .m-pro-exp .exp_left .text_btn textarea{
+	max-width:722px;
+	max-height:115px;
+	width:722px;
+	height:115px;
+	resize: none;
+	float:left;
+	display:block;
+	margin:0 auto;
+	outline: none;
+	border:none;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    font:14px "微软雅黑","Trebuchet MS",Arial,Helvetica,sans-serif;
+    padding:0 8px;
+}
+.wrap .m-pro-exp .exp_left .text_btn input{
+	background:#009de0;
+	color:#fff;
+	width:88px;
+	height:31px;
+	padding:0;
+	border:0;
+	float:left;
+	outline: none;
+	float:right;
+	margin-right:22px;
+	margin-top:95px;
+	cursor:pointer;
+}
+.wrap .m-pro-exp .exp_right{
+	float:right;
+	background:#e6f3fc;
+	width:257px;
+	padding-top:35px;
+}
+.wrap .m-pro-exp .exp_right li{
+	float:left;
+	width:60px;
+	margin:0 12.5px;
+	cursor:pointer;
+	margin-bottom:20px;
+}
+.wrap .m-pro-exp .exp_right li img{
+	width: 32px;
+	height:32px;
+	display:block;
+	margin:0 auto;
+}
+.wrap .m-pro-exp .exp_right li p{
+	text-align:center;
+	height:21px;
+	line-height:21px;
+	color:#57768a;
+	font-size:12px;
+}
+.textareaWapper_z{
+	max-width:720px;
+	max-height:115px;
+	width:720px;
+	height:115px;
+	float:left;
+	display:block;
+	margin:0 auto;
+	margin-top: 9px;
+    margin-left: 5px;
+    overflow:hidden;
+}
