@@ -1516,7 +1516,7 @@
     var local = new BMap.LocalSearch(map, {
         renderOptions:{map: map}
     });
-    local.search("北京动物园");
+    local.search("<?php echo $vname;?>");
 </script>
 
 

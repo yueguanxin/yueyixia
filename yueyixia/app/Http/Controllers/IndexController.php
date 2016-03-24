@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
 use Input;
+use Gregwar\Captcha\CaptchaBuilder;
 
 use Illuminate\Http\Request;
  
@@ -51,6 +52,25 @@ class IndexController extends Controller {
 		}
 		$address=DB::table('y_address')->get();
 		return view('index/index',['code_url'=>$code_url,'address'=>$address]);
+
+
+		
+	}
+
+	public function yanzhengma($tmp){
+		//验证码
+			 //生成验证码图片的Builder对象，配置相应属性 
+			 $builder = new CaptchaBuilder;
+			 //可以设置图片宽高及字体 
+			 $builder->build($width = 100, $height = 40, $font = null); 
+			 //获取验证码的内容 
+			 $phrase = $builder->getPhrase();
+			 //把内容存入session 
+			 Session::flash('milkcaptcha', $phrase); 
+			 //生成图片 
+			 header("Cache-Control: no-cache, must-revalidate");
+			 header('Content-Type: image/jpeg');
+			 $builder->output();
 	}
 
 //登陆
@@ -89,6 +109,17 @@ class IndexController extends Controller {
 			session(['name' => $tel]);
 		}else{
 			echo"<script>alert('注册成功'); location.href='/'</script>";
+		}
+	}
+
+	//验证手机号唯一
+	public function tel_one(){
+		$tel=Input::get('tel');
+		$arr = DB::table('y_user')->where('uphone', $tel)->get();
+		if($arr){
+			echo '0';
+		}else{
+			echo '1';
 		}
 	}
 	

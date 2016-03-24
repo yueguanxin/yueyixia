@@ -2,29 +2,29 @@
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>我的收藏 - 大鱼自助游</title>
-    <meta name="author" content="webmaster@fishtrip.cn">
+<script src="%E9%A2%84%E8%AE%A2%E6%9C%8D%E5%8A%A1%20-%20%E5%A4%A7%E9%B1%BC%E8%87%AA%E5%8A%A9%E6%B8%B8_files/v.htm" charset="utf-8"></script><script src="js/ec.js" async="" type="text/javascript"></script><script src="js/tracker_ex.js" async=""></script><script src="js/tracker.js" async=""></script><script src="js/analytics.js" async=""></script><script src="js/hm.js"></script><script type="text/javascript">window.BWEUM||(BWEUM={});BWEUM.info={"beacon":"bi-collector.oneapm.com/beacon/rum/ruby","errorBeacon":"bi-collector.oneapm.com/beacon/error/ruby","licenseKey":"J6YrM~vV2VrFaRj3","applicationID":2279631,"transactionName":"ExIBGTAnXyQgDzpeXCpYCyI3NVQILh4qUkE3WA0oNQ==","queueTime":0,"applicationTime":278,"agent":"//bi-collector.oneapm.com/static/js/bw-send-411.4.5.js"}</script>
+<script type="text/javascript" src="js/bw-loader-411.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
-    <meta name="viewport" content="width=device-width">
-    
-<link href="css/vdayu_3rd_base-e0b7972e86e0b60cde08ad047d4ab17b.css" media="all" rel="stylesheet" type="text/css">
-<link href="css/vdayu_v3_header-734c59eb3ce217cd85f840f7640c18d7.css" media="all" rel="stylesheet" type="text/css">
-<link href="css/vdayu_base-e904f229d19c7c69b1dc29ff23c6ca1b.css" media="all" rel="stylesheet" type="text/css">
-<link href="css/application-6c38df514dc38801bf00f14777ec72d9.css" media="all" rel="stylesheet" type="text/css">
-
-    <meta content="authenticity_token" name="csrf-param">
-<meta content="CjZW29SQq7npkXabcwtJPS+pvYIqcZNg91aN0Q+5thE=" name="csrf-token">
+    <meta name="author" content="webmaster@fishtrip.cn">
+    <title>订单详情页</title>
     <link href="css/base.css" media="screen" rel="stylesheet" type="text/css">
     <link href="css/common.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/vdayu_ng_3rd-1280220e736dba2af9c4b5968cbea72d.css" media="all" rel="stylesheet" type="text/css">
+    <link href="css/vdayu_ng_base-f2b53f096b50d835e26668570ded24bb.css" media="all" rel="stylesheet" type="text/css">
+    <link href="css/vdayu_ng-021b3f0f8dbf9f2bf5806d836ea1f3f5.css" media="all" rel="stylesheet" type="text/css">
+    <link href="css/vdayu_v3_header-1eb11b2a4dda7fd4b43a1fea5fd30f85.css" media="all" rel="stylesheet" type="text/css">
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="10AAkGWeD3MG+P1bZUHU7V16kleKGhoKZc+lBXGBQnc=" name="csrf-token">
     <!--[if lte IE 8]>
-      <link href="http://static03.fishtrip.cn/assets/ng/vdayu_ie-d2ceb5b6da55e49dfd3724d1479d219b.css" media="screen" rel="stylesheet" type="text/css" />
-      <script src="http://static04.fishtrip.cn/assets/ng/3rd/html5-083899362ed59cc279451ac430aa737d.js" type="text/javascript"></script>
+      <link href="http://static04.fishtrip.cn/assets/ng/vdayu_ie-d2ceb5b6da55e49dfd3724d1479d219b.css" media="screen" rel="stylesheet" type="text/css" />
+      <script src="http://static03.fishtrip.cn/assets/ng/3rd/html5-083899362ed59cc279451ac430aa737d.js" type="text/javascript"></script>
       <script src="https://cdn.jsdelivr.net/es5.shim/4.4.1/es5-shim.min.js"></script>
       <script src="https://cdn.jsdelivr.net/es5.shim/4.4.1/es5-sham.min.js"></script>
     <![endif]-->
 
     
-    <script src="%E6%88%91%E7%9A%84%E6%94%B6%E8%97%8F%20-%20%E5%A4%A7%E9%B1%BC%E8%87%AA%E5%8A%A9%E6%B8%B8_files/v.htm" charset="utf-8"></script><script src="js/ec.js" async="" type="text/javascript"></script><script src="js/tracker_ex.js" async=""></script><script src="js/tracker.js" async=""></script><script src="js/analytics.js" async=""></script><script src="js/hm.js"></script><script type="text/javascript">
+    <script type="text/javascript">
   var _hmt = _hmt || [];
   (function() {
     var hm = document.createElement("script");
@@ -53,112 +53,99 @@
 
     fa('set', 'user_id', 260266);
 </script>
-
+ <?php
+  include('common/head.php');
+ ?>
 
   </head>
 
-  <body class=""><div id="loading" class="message" style="display:none"> <div class="message-inside"> <span class="message-text">加载中, 请稍后...</span> </div> </div>
+  <body class="">
 
- <?php
-	include('common/head.php');
- ?>  
-    
-    <div class="container page-container">
-      
-<div class="my-favorites-page">
-  <h1>我的收藏</h1>
-  <div class="row">
-    <div class="span12 favorites-list my_favorites_list">
-      <div class="status">
-        收藏(1)
-      </div>
-      <div class="list">
-
-<!--收藏循环开始--->
-<?php
-	foreach($collection as $ck=>$cv){
-?>
-	<div class="item clearfix favorite_194348">
-          
-<!-- 参数 category, photo_path, target -->
-
-<div class="photo house favorite-photo-item">
-    <a href="http://www.fishtrip.cn/houses/NM00LEqd5ms" class="fpitem__link" target="_blank"><img alt="2a35bd421b3a918ed1135046321fef5b4cf382ca" src="img/img/<?php echo $cv['vimg']?>"></a>
-</div>
+  <div class="hoform__aside">
+  </div>
+<div class="order-overview order-detail-page"></div>
+  <div class="ooverview__container">
+    <div class="ooverview__thumb" style="width: 900px">
+      <a href="http://www.fishtrip.cn/houses/yTxO28u95mM"><img alt="House-145145423661176069" src="img/img/<?php echo $arr[0]['vimg']?>" width="450px" height="250px" style="margin-left: 50px;margin-right: 30px;margin-top: 50px"></a>
+        <div class="house-order-info" style="float: right;margin-top: 50px">
+            <dl class="hoinfo__list hoinfo-dl" >
+                <dt class="hoinfo-dl__dt">景点名称</dt>
+                <dd class="hoinfo-dl__dd"><?php echo $arr[0]['vname']; ?></dd>
+                <dt class="hoinfo-dl__dt">订单号</dt>
+                <dd class="hoinfo-dl__dd"><?php echo $arr[0]['oname']; ?></dd>
+                <dt class="hoinfo-dl__dt"> 票价类型 </dt>
+                <dd class="hoinfo-dl__dd"> <?php echo $arr[0]['tname']; ?>  </dd>
+                <dt class="hoinfo-dl__dt"> 入住日期 </dt>
+                <dd class="hoinfo-dl__dd"><?php echo $arr[0]['otime']; ?></dd>
+                <dt class="hoinfo-dl__dt"> 购票人数 </dt>
+                <dd class="hoinfo-dl__dd"> <?php echo $arr[0]['onum']; ?> </dd>
+                <dt class="hoinfo-dl__dt"> 景点地址 </dt>
+                <dd class="hoinfo-dl__dd"> <?php echo $arr[0]['vplace']; ?> </dd>
+            </dl>
 
 
 
-<!-- 参数： target, title, price, (location或path) desc_topic, desc_content -->
-
-<div class="info">
-    <div class="price">
-      <span class="num">¥ <?php echo $cv['vstartprice']?></span>
-      <span class="unit">元起</span>
-    </div>
-
-    <div class="title">
-        <a href="http://www.fishtrip.cn/houses/NM00LEqd5ms" target="_blank"><?php echo $cv['vname']?></a>
-    </div>
-
-    <div class="loc">
-      <span class="yicon yicon-search-position"></span>
-      <?php echo $cv['vplace']?>
-    </div>
 
 
-    <div class="description">
-      <span class="topic"></span>
-      
-    </div>
+            <div class="order-detail-order-price">
 
-    <a href="#" class="my_favorite_delete_cmd" value="<?php echo $cv['vid'];?>" data-method="put" data-remote="true" rel="nofollow">删除</a>
-</div>
+                <div class="odoprice__selling-amount order-detail-selling-amount">
+                    <span class="odsamount__title">总金额 </span>
+                    <span class="odsamount__number"> ￥<strong><font color="red"> <?php echo $arr[0]['omoney']; ?> 元</font> </strong> </span>
+                </div>
 
+            </div>
 
+            <div class="order-detail-order-submit">
+                <button class="yu-btn yu-btn--buy oform-sumbit__submit js-house-order-submit" data-house-id="yTxO28u95mM" data-disable-with="提交中...">
+                    去支付
+                </button>
+            </div>
         </div>
-<?php	
-	}
-?>
-        
-<!--收藏循环结尾--->
-      </div>
-      
     </div>
+  </div></div>
+    <div class="ooverview__info">
 
-    <div class="span4 pull-right">
-      <div class="weixin_bar_code">
-        
-<div class="wechat-qrcode">
-  <div class="wqrcode__title">
-    <p>获取更多专业又贴心的住宿推荐，马上扫码关注微信</p>
-  </div>
-  <div class="wqrcode__pic">
-    <img alt="大鱼自助旅行顾问" src="img/collection/wechat-qr-code.jpg" title="大鱼自助旅行顾问" height="150" width="150">
-  </div>
-  <div class="wqrcode__title">
-    大鱼自助旅行顾问
-  </div>
 
-  <div class="wqrcode__text">
-    <p>任何预订相关疑问、选择住宿的建议、旅途中遇紧急情况需支援，或免费规划行程，大鱼君都可以帮你！</p>
+
+
+
+
+  
+  
+  <input id="utm" name="utm" type="hidden">
+  <input id="room_rate_plan_id" name="room_rate_plan_id" value="155318" type="hidden">
+  <input id="room_id" name="room_id" value="ZwCAIwt5GYo" type="hidden">
+  <input id="start_day" name="start_day" value="2016-03-23" type="hidden">
+  <input id="end_day" name="end_day" value="2016-03-24" type="hidden">
+  <input id="room_number" name="room_number" value="1" type="hidden">
+
+  <div class="js-show-image-captcha"> </div>
+
+</form>
+<div class="modal fade daily-discount-failed-modal js-daily-discount-faild-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p class="ddfmodal__title">特惠已抢光</p>
+        <p class="ddfmodal__content js-daily-discount-faild-content">
+          
+        </p>
+        <div class="ddfmodal__button js-daily-discount-failed-modal-button">
+          我知道了
+        </div>
+
+      </div>
+    </div>
   </div>
 </div>
-
-
-      </div>
-    </div>
-  </div>
-</div>
-
-    </div>
-
 
     
 <div class="footer print-hide">
   <div class="footer__wrap">
     <div class="footer__video">
       <a href="http://www.fishtrip.cn/about_dayu">
-        <img alt="大鱼自助游" src="img/collection/footer-video.jpg" title="鱼行天下（北京）旅行社有限公司" height="170" width="270">
+        <img alt="大鱼自助游" src="img/footer-video.jpg" title="鱼行天下（北京）旅行社有限公司" height="170" width="270">
 </a>    </div>
     <div class="footer__lists">
         <div class="footer__list  footer-list">
@@ -276,94 +263,23 @@
         <i class="famodal__close js-close-footer-modal"></i>
         <p class="famodal__title">下载大鱼APP，下单立减20元</p>
         <div class="famodal__icon">
-          <img alt="Logo-app" src="img/collection/logo-app.png" height="85" width="85">
+          <img alt="Logo-app" src="%E9%A2%84%E8%AE%A2%E6%9C%8D%E5%8A%A1%20-%20%E5%A4%A7%E9%B1%BC%E8%87%AA%E5%8A%A9%E6%B8%B8_files/logo-app.png" height="85" width="85">
         </div>
         <div class="famodal__qrcode" style="text-align: center">
-          <img alt="Qr-v4" src="img/collection/qr-v4.png" height="130" width="130">
+          <img alt="Qr-v4" src="img/qr-v4.png" height="130" width="130">
         </div>
         <div class="famodal__tips">
           <a href="https://itunes.apple.com/cn/app/da-yu-tai-wan-min-su-ri-ben/id975030554?mt=8" class="fwmodal__iOS">iPhone</a>
-          <a href="http://www.fishtrip.cn/app/hunter_fishtrip_v2.5.0.apk" class="fwmodal__android">Android</a>
+          <a href="http://www.fishtrip.cn/app/hunter_fishtrip_v2.6.1.apk" class="fwmodal__android">Android</a>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<?php
-	include('common/footer.php');
+<div class="footer-misc-group">
+  <div class="fmgroup__wrap">
+    <div class="fmgroup__item">
+       <?php
+  include('common/footer.php');
 ?>
-
-<a title="" data-original-title="" class="footer-agent js-footer-affix js-footer-agent affix-top">
-  <div class="fagent__icon-block">
-    <span class="yicon-help-weixin"></span>
-  </div>
-</a>
-
-<div class="footer-agent-popover js-footer-agent-popover print-hide">
-  <!--<a class="fapopover__close js-close-footer-agent">
-    <span class="yicon-slide-right-blue"></span>
-  </a>-->
-  <div class="fapopover__title">
-    大鱼微信客服
-  </div>
-  <div class="fapopover__qrcode">
-    <img alt="大鱼微信客服" src="img/collection/footer-weixin-qrcode.png" title="大鱼微信客服" height="106" width="106">
-  </div>
-  <div class="fapopover__tips">
-    每日9:00~21:00
-  </div>
-</div>
-
-
-
-
-
-
-<div class="footer-advertise js-footer-advertise is-active">
-  <a href="http://www.fishtrip.cn/articles/157-new-year-coupon" class="gtm-ad fadvertise__image" target="_blank"></a>
-  <a href="javascript:void(0);" class="fadvertise__close js-footer-advertise-close gtm-ad-close" data-url="http://www.fishtrip.cn/hide_footer_advertise">
-    <span> × </span>
-</a></div>
-
-
-
-    <script src="js/jquery.js" type="text/javascript"></script>
-<script src="js/jquery-ui.js" type="text/javascript"></script>
-<script src="js/bootstrap.js" type="text/javascript"></script>
-
-
-<script src="js/vdayu_3rd_base-254927da95f1b294f479d73a07e2fb2c.js" type="text/javascript"></script>
-<script src="js/vdayu_base-55e8c2df2183ff33b615f22debe576af.js" type="text/javascript"></script>
-<script src="js/vdayu_v3_header-4c405c6541bd51efeb6b09f0bb88a99c.js" type="text/javascript"></script>
-<script src="js/application-71f852e38ee417232c4c74e75cd260af.js" type="text/javascript"></script>
-
-    <script src="js/base.js" type="text/javascript"></script>
-    <script src="js/common.js" type="text/javascript"></script><div id="react-sessions-modal" style="display: none"><div class="react-sessions react-sessions-modal" id="sessions-modal-root" data-reactid=".0"></div></div>
-
-    
-    
-  
-
-<div id="ui-timepicker-div" class="ui-timepicker ui-widget ui-helper-clearfix ui-corner-all " style="display: none"></div><div id="vdayu_tip_limit_widget" class="input-limit-info"></div>
-
-<script type="text/javascript">
-	$(function(){
-		$(".my_favorite_delete_cmd").click(function(){
-			//alert("1111")
-			var vid=$(this).attr('value');
-			//alert(vid);
-			$.get("/collection_delete",{vid:vid},function(date){
-				/*if(date[0]=='1'){
-					alert('删除成功');
-					$(".list").html(date[1]);
-				}else{
-					alert('删除失败')
-				}*/
-				$(".list").html(date);
-			})
-		})
-	})
-</script>
-
-</body></html>

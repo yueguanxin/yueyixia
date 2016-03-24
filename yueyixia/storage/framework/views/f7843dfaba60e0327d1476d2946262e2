@@ -61,25 +61,25 @@
 
  <?php
 	include('common/head.php');
- ?>  
-    
+ ?>
+
     <div class="container page-container">
       
 <div class="my-favorites-page">
-  <h1>我的收藏</h1>
+  <h1>我的订单</h1>
   <div class="row">
     <div class="span12 favorites-list my_favorites_list">
       <div class="status">
-        收藏(1)
+        收藏(<?php echo count($arr);?>)
       </div>
       <div class="list">
 
 <!--收藏循环开始--->
 <?php
-	foreach($collection as $ck=>$cv){
+	foreach($arr as $ck=>$cv){
 ?>
 	<div class="item clearfix favorite_194348">
-          
+
 <!-- 参数 category, photo_path, target -->
 
 <div class="photo house favorite-photo-item">
@@ -92,12 +92,12 @@
 
 <div class="info">
     <div class="price">
-      <span class="num">¥ <?php echo $cv['vstartprice']?></span>
-      <span class="unit">元起</span>
+      <span class="num">¥ <?php echo $cv['omoney']?></span>
+      <span class="unit">元</span>
     </div>
 
     <div class="title">
-        <a href="http://www.fishtrip.cn/houses/NM00LEqd5ms" target="_blank"><?php echo $cv['vname']?></a>
+        <a href="http://www.fishtrip.cn/houses/NM00LEqd5ms" target="_blank"><?php echo $cv['oname']?></a>
     </div>
 
     <div class="loc">
@@ -108,21 +108,21 @@
 
     <div class="description">
       <span class="topic"></span>
-      
-    </div>
 
-    <a href="#" class="my_favorite_delete_cmd" value="<?php echo $cv['vid'];?>" data-method="put" data-remote="true" rel="nofollow">删除</a>
+    </div>
+    <a href="/lists?oname=<?php echo $cv['oname'];?>" style="float: right">查看详情</a>
+    <a href="javascript:(void)" onclick="fun(<?php echo $cv['oid'];?>);" class="my_favorite_delete_cmd" style="float: right;margin-right: 20px" >删除</a>
 </div>
 
 
         </div>
-<?php	
+<?php
 	}
 ?>
-        
+
 <!--收藏循环结尾--->
       </div>
-      
+
     </div>
 
     <div class="span4 pull-right">
@@ -341,29 +341,24 @@
     <script src="js/base.js" type="text/javascript"></script>
     <script src="js/common.js" type="text/javascript"></script><div id="react-sessions-modal" style="display: none"><div class="react-sessions react-sessions-modal" id="sessions-modal-root" data-reactid=".0"></div></div>
 
-    
-    
-  
-
 <div id="ui-timepicker-div" class="ui-timepicker ui-widget ui-helper-clearfix ui-corner-all " style="display: none"></div><div id="vdayu_tip_limit_widget" class="input-limit-info"></div>
-
+  </body>
 <script type="text/javascript">
-	$(function(){
-		$(".my_favorite_delete_cmd").click(function(){
-			//alert("1111")
-			var vid=$(this).attr('value');
-			//alert(vid);
-			$.get("/collection_delete",{vid:vid},function(date){
-				/*if(date[0]=='1'){
-					alert('删除成功');
-					$(".list").html(date[1]);
-				}else{
-					alert('删除失败')
-				}*/
-				$(".list").html(date);
-			})
-		})
-	})
+    function fun(id) {
+        var ajax = new XMLHttpRequest();
+        ajax.onreadystatechange=function(){
+            if (ajax.readyState==4)
+            {
+                //接收数据
+                alert(ajax.responseText);
+                window.location.href="/myorder";
+                //document.getElementById("sppwd").innerHTML = ajax.responseText;
+            }
+        }
+        //与服务器建立连接
+        ajax.open("get","/dorder?oname="+id);
+        //处理请求
+        ajax.send(null);
+    }
 </script>
-
-</body></html>
+</html>

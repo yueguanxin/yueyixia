@@ -21,7 +21,7 @@
         <div class="control-group">
           <label class="control-label required" for="user_password">密码</label>
           <div class="controls">
-            <input class="span4" id="upwd" name="upwd" size="30" type="password">
+            <input class="span4" id="user_password" name="upwd" size="30" type="password">
             <span class="help-block">
               <span class="muted">安全强度</span>
               <div class="pwd_intension password-intension progress"></div>

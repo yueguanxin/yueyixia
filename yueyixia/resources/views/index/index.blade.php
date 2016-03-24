@@ -182,6 +182,17 @@ jQuery(document).ready(function($) {
 				<li><a  href="<?=$code_url?>"><img src="img/weibo.png" title="点击进入授权页面" alt="点击进入授权页面" border="0" /></a>
 					 <a href="#" onclick='toQzoneLogin()'><img src="img/qq.png"></a>
 				</li>
+
+<input type="text" name="captcha" class="form-control" style="width: 300px;"> 
+<a onclick="javascript:re_captcha();" >
+<img src="{{ URL('/yanzhengma/1') }}"  alt="验证码" title="刷新图片" width="100" height="40" id="c2c98f0de5a04167a9e427d883690ff6" border="0"></a> 
+<script>  
+  function re_captcha() {
+    $url = "{{ URL('/yanzhengma') }}";
+        $url = $url + "/" + Math.random();
+        document.getElementById('c2c98f0de5a04167a9e427d883690ff6').src=$url;
+  }
+</script>
                 </ol>
            </form>
      </div>
@@ -207,7 +218,7 @@ jQuery(document).ready(function($) {
           <h3>欢迎注册约一下</h3>
      </div>
      <div class="theme-popbod dform">
-           <form class="theme-signin" name="loginform" action="/register" method="post">
+           <form class="theme-signin" name="loginform" action="/register" method="post" onsubmit='fun()'>
                 <ol>
                      <li><h4>注册约一下！</h4></li>
                      <li><strong>手机号：</strong><input class="ipt" type="text" name="tel"  size="20" placeholder='请输入您的手机号' id='tel'/><span id='sp_tel'></span></li>
@@ -216,21 +227,43 @@ jQuery(document).ready(function($) {
 					   </li>
                      <li><strong>密码：</strong><input class="ipt" type="password" name="pwd"  size="20"  placeholder='请输入您的密码'  id='pwd'/><span id='sp_pwd'></span></li>
 						<input type="hidden" name="_token" value="{{csrf_token()}}" />
-                     <li><input class="btn btn-primary" type="submit" value=" 注册 " /></li>
+                     <li><input class="btn btn-primary" id="login" type="submit" value=" 注册 "  /></li>
                 </ol>
            </form>
      </div>
 </div>
 <script type="text/javascript">
+	
+	flag=0;
+	$("#login").click(function(){
+		//alert("111");
+		if(flag==0){
+			return false;
+		}
+		return true;
+	})
 //验证手机号
 	$('#tel').blur(function(){
 		var tel=$('#tel').attr('value');
 		var tel_r=/^1\d{10}$/;
 		if(tel_r.test(tel)){
-			$('#sp_tel').html('ok');
+			$.get('/tel_one',{tel:tel},function(data){
+				if(data==0){
+					$('#sp_tel').html('手机号码已经注册过约一下');
+					flag=0;
+					return flag;
+				}else if(data==1){
+					$('#sp_tel').html('ok');
+					flag=1;
+					return flag;
+				}
+			})
 		}else{
 			$('#sp_tel').html('手机号码无效');
+			flag=0;
+			return flag;
 		}
+
 	})
 
 	//验证密码
@@ -239,13 +272,20 @@ jQuery(document).ready(function($) {
 		var pwd_r=/^.{6,15}$/;
 		if(pwd_r.test(pwd)){
 			$('#sp_pwd').html('ok');
+			flag=1;
+			return flag;
 		}else{
 			$('#sp_pwd').html('密码不能低于6位,大于15位');
+			flag=0;
+			return flag;
 		}
 	})
+
+	
 </script>
 	<!--注册结束-->
 
+<div class="theme-popover-mask"></div>
     
     <div class="header__menu">
     </div>
@@ -284,34 +324,17 @@ jQuery(document).ready(function($) {
   </ul>
   <div class="cselector__panes tab-content">
       <div class="tab-pane city-selector-pane active" id="pane_231" role="tabpanel">
-        
-  <div class="cpane__row">
-	<?php
-		foreach($address as $ak=>$av){
-	?>
-		<span class="cpane__city">
-		  <a href="/search?aid=<?php echo $av['aid']?>" class=""><?php echo $av['aname']?></a>
-		</span>
-	<?php
-		}
-	?>
-     <!--<span class="cpane__city">
-        <a href="http://www.fishtrip.cn/korea/seoul/" class="">首尔</a>
-      </span>-->
-  </div>
-
- 
-      </div>
-      <div class="tab-pane city-selector-pane " id="pane_37" role="tabpanel">
-        
 
   <div class="cpane__row">
-      <span class="cpane__city">
-        <a href="http://www.fishtrip.cn/korea/seoul/" class="">首尔</a>
-      </span>
-      <span class="cpane__city">
-        <a href="http://www.fishtrip.cn/korea/busan/" class="">釜山</a>
-      </span>
+		<?php
+			foreach($address as $ak=>$av){
+		?>
+			<span class="cpane__city">
+			  <a href="/search?aid=<?php echo $av['aid']?>" class=""><?php echo $av['aname']?></a>
+			</span>
+		<?php
+			}
+		?>
   </div>
 
  

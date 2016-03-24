@@ -25,6 +25,8 @@ Route::get('feedback', 'FeedbackController@index');//回馈
 Route::get('details','DetailsController@index');//景点详情
 Route::any('order','OrderController@index');//生成订单页面
 Route::any('lists','OrderController@lists');//订单详情页
+Route::any('myorder','OrderController@myorder');//我的订单
+Route::any('dorder','OrderController@dorder');//删除订单
 Route::get('like','LikeController@index');//大家喜欢
 Route::get('money','MoneyController@index');//我的钱包
 Route::get('collection','CollectionController@index');//我的收藏
@@ -33,7 +35,9 @@ Route::get('collection_delete', 'CollectionController@c_del'); //添加收藏
 Route::get('register','RegisterController@register');//登录
 Route::get('registered','RegisterController@registered');//注册
 Route::any('login','IndexController@login');//登陆
+Route::any('yanzhengma/{tmp}','IndexController@yanzhengma');
 Route::any('register','IndexController@register');//注册
+Route::any('tel_one','IndexController@tel_one');
 Route::any('callback','IndexController@callback');//微博登陆
 Route::any('edit','UserController@edit');//用户设置------修改个人资料
 Route::any('edit_add','UserController@edit_add');
@@ -43,6 +47,7 @@ Route::any('pwd_update','UserController@pwd_update');
 Route::any('edit_phone','UserController@edit_phone');//用户设置-------修改手机号
 Route::any('edit_email','UserController@edit_email');//用户设置-------绑定邮箱
 Route::get('send','UserController@send');
+Route::get('email_add','UserController@email_add');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

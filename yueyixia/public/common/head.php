@@ -44,8 +44,9 @@ jQuery(document).ready(function($) {
   <li class="flist__item navbar-menu-hot">
     <a href="http://www.fishtrip.cn/preferentials/" class="header__link" target="_blank">我的钱包</a>
   </li>
-  <li class="flist__item"><a href="http://www.fishtrip.cn/orders/my" class="header__link">订单</a></li>
+  <li class="flist__item"><a href="/myorder" class="header__link">订单</a></li>
   <li class="flist__item"><a href="/collection" class="header__link">收藏</a></li>
+  <li class="flist__item"><a href="/" class="header__link">我的好友</a></li>
   <li class="flist__item">
     <div class="user-menu user_logged_in dropdown">
   <a class="umenu__button user-avatar dropdown-toggle header__link" data-toggle="dropdown">
@@ -62,7 +63,7 @@ jQuery(document).ready(function($) {
     </li>
 
     <li>
-      <a href="http://www.fishtrip.cn/users/YSnm7EJrS0A/edit">设置</a>
+      <a href="/edit">设置</a>
     </li>
 
     <li>
@@ -237,7 +238,7 @@ jQuery(document).ready(function($) {
           <h3>欢迎注册约一下</h3>
      </div>
      <div class="theme-popbod dform">
-           <form class="theme-signin" name="loginform" action="/register" method="post">
+           <form class="theme-signin" name="loginform" action="/register" method="post" onsubmit='fun()'>
                 <ol>
                      <li><h4>注册约一下！</h4></li>
                      <li><strong>手机号：</strong><input class="ipt" type="text" name="tel"  size="20" placeholder='请输入您的手机号' id='tel'/><span id='sp_tel'></span></li>
@@ -246,21 +247,43 @@ jQuery(document).ready(function($) {
 					   </li>
                      <li><strong>密码：</strong><input class="ipt" type="password" name="pwd"  size="20"  placeholder='请输入您的密码'  id='pwd'/><span id='sp_pwd'></span></li>
 						<input type="hidden" name="_token" value="{{csrf_token()}}" />
-                     <li><input class="btn btn-primary" type="submit" value=" 注册 " /></li>
+                     <li><input class="btn btn-primary" id="login" type="submit" value=" 注册 "  /></li>
                 </ol>
            </form>
      </div>
 </div>
 <script type="text/javascript">
+	
+	flag=0;
+	$("#login").click(function(){
+		//alert("111");
+		if(flag==0){
+			return false;
+		}
+		return true;
+	})
 //验证手机号
 	$('#tel').blur(function(){
 		var tel=$('#tel').attr('value');
 		var tel_r=/^1\d{10}$/;
 		if(tel_r.test(tel)){
-			$('#sp_tel').html('ok');
+			$.get('/tel_one',{tel:tel},function(data){
+				if(data==0){
+					$('#sp_tel').html('手机号码已经注册过约一下');
+					flag=0;
+					return flag;
+				}else if(data==1){
+					$('#sp_tel').html('ok');
+					flag=1;
+					return flag;
+				}
+			})
 		}else{
 			$('#sp_tel').html('手机号码无效');
+			flag=0;
+			return flag;
 		}
+
 	})
 
 	//验证密码
@@ -269,10 +292,16 @@ jQuery(document).ready(function($) {
 		var pwd_r=/^.{6,15}$/;
 		if(pwd_r.test(pwd)){
 			$('#sp_pwd').html('ok');
+			flag=1;
+			return flag;
 		}else{
 			$('#sp_pwd').html('密码不能低于6位,大于15位');
+			flag=0;
+			return flag;
 		}
 	})
+
+	
 </script>
 	<!--注册结束-->
 

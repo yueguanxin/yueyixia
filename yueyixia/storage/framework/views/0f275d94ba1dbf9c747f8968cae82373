@@ -11,36 +11,70 @@
         如果绑定失败，说明此邮箱登录过或绑定过其它账号，请先用邮箱登录，解绑后，再绑定此账号。
       </p>
 	<?php
-		if(empty($arr['u_email'])){
+		if($arr['is_yanzheng']==0){
 	?>
         <div class="user-binding-weixin-desc">
           <span class="yicon-binding-weixin"> </span>
           未绑定
         </div>
 
-        <form method="post" action="/send">
+
           <div class="controls">
-              <font size="5" color="">请输入您的邮箱号：</font>
-            <input class="span2"  name="email" placeholder="请输入您的邮箱号" size="30" type="text">
+              <font size="4" color="">请输入您的邮箱号：</font>
+            <input class="span2"  name="email" id='email' placeholder="请输入您的邮箱号" size="30" type="text">
           </div>
-        </form>
-        <a href="/send" class="user-binding-weixin-link">点击绑定</a>
+       
+        <a href="javascript:void(0)" class="user-binding-weixin-link" onclick='dianji()'>点击绑定</a> 
+		<script type="text/javascript">
+			function dianji(){
+			email=$('#email').attr('value');
+			$.get('/send',{email:email},function(data){
+				alert(data);
+			});
+		}
+		</script>
     </div>
   </div>
 </div>
 <?php
-  }else{
+  }else if($arr['is_yanzheng']==1){
 	?>
 	<div class="user-binding-weixin-desc">
-          已经绑定
+          未验证，已经绑定
         </div>
 		<div class="user-binding-weixin-desc">
-		微信号为：<?php echo $arr['u_email']?><a href='#'>点击修改</a>
+		邮箱号为：<?php echo $arr['u_email']?>
+		<a href='/send?email=<?php echo $arr['u_email']?>'>点击验证</a>
 		  </div>
 	<?php
-	}
+	}else if($arr['is_yanzheng']==2){
 	?>
+	<div id='updata_list'>
+		<div class="user-binding-weixin-desc">
+         已经验证
+        </div>
+		<div class="user-binding-weixin-desc">
+		邮箱号为：<?php echo $arr['u_email']?>
+		<a href='javascript:void(0)' id='email_updata'>点击修改</a>
+		  </div>
+		  </div>
+	<?php
+	
+	}?>
+<script type="text/javascript">
+	$('#email_updata').click(function(){
+		$('#updata_list').html('  <div class="user-binding-weixin-desc"></div><div class="controls">   <font size="4" color="">请输入您的邮箱号：</font> <input class="span2"  name="email" id="email" placeholder="请输入您的邮箱号" size="30" type="text">   </div> <a href="javascript:void(0)" class="user-binding-weixin-link" onclick="dianji()">点击绑定</a> ');
+	});
 
+
+
+		function dianji(){
+			email=$('#email').attr('value');
+			$.get('/send',{email:email},function(data){
+				alert(data);
+			});
+		}
+</script>
     </div>
 
 

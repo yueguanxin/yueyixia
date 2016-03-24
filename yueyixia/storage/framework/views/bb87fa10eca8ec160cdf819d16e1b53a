@@ -33,7 +33,7 @@
       <span class="hiinfo__name">
         <a href="http://www.fishtrip.cn/houses/hm9685818891/" title="台东背包监狱青年旅馆"><?php echo $v['vname']?></a>
       </span>
-	  <?php
+	  <!--<?php
 		foreach($ticket as $kk=>$vv){
 			if($v['vid']==$vv['vid']){
 	  ?>
@@ -44,10 +44,10 @@
 			break;
 			}
 		}
-	  ?>
-      <!--<span class="hiinfo__price">
-        ￥117 <small>起 / 1晚</small>
-      </span>-->
+	  ?>-->
+      <span class="hiinfo__price">
+        ￥<?php echo $v['vstartprice']?> <small>起 / 1张</small>
+      </span>
     </div>
 
     <div class="hiinfo__row">

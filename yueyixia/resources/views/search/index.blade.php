@@ -695,7 +695,8 @@
 <script type="text/javascript">
 	$(function(){
 		$(".money").click(function(){
-			var money=$(this).val();
+			//var money=$(this).val();
+			var money=$('input:radio[name="money"]:checked').val();
 			var vid_all="";
 			$("input[name='vid']:checked").each(function(){
                 var vid=$(this).val();

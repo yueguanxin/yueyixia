@@ -52,14 +52,21 @@ class CollectionController extends Controller {
 	}
 	//无刷新收藏删除
 	public function c_del(){
+		if(empty(session('name'))){
+			echo "<script>alert('请先登录')</script>";die;
+		}
 		$vid=$_GET['vid'];
 		//echo $vid;die;
 		$info=DB::table('y_collection')->where(['vid'=>$vid])->delete();
-		echo $info;die;
+		//echo $info;die;
 		if(!$info){
 			echo "<script>alert('删除失败！')</script>";
 		}
 		echo "<script>alert('删除成功！')</script>";
+		$username=session('name');
+		$user=DB::table('y_user')->where(['uname'=>$username])->first();
+		$collection=DB::table('y_collection')->join('y_view','y_collection.vid','=','y_view.vid')->where(['uid'=>$user['uid']])->get();
+		//print_r($collection);
 		return view('collection/c_del',['collection'=>$collection]); 
 	}
 }

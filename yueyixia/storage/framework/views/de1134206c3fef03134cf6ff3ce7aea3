@@ -102,7 +102,7 @@
 
   <div class="riheader__right">
    <span class="riheader__share">
-      <a href="/view" class="riheader__btn fishui-button fishui-button--small fishui-button--yellow js-show-share-modal" style="background: blue">
+      <a href="/view?vid=<?php echo $user['0']['vid']?>#house_show_location" class="riheader__btn fishui-button fishui-button--small fishui-button--yellow js-show-share-modal" style="background: blue">
           看看它在哪!
       </a>    </span>
     <span class="riheader__share">
@@ -335,11 +335,7 @@
         </div>
         <input type="hidden" id="tt1" value="<?php echo $user[0]['tid'] ?>">
         <input type="hidden" id="tt2" value="<?php echo $user[1]['tid'] ?>">
-
 <input class="riopptions__button" value="闪订" readonly="readonly" style="text-align:center;" id="sum">
-<!--<button class="riopptions__button js-room-info-form-submit-button-without-date" data-disable-with="提交中...">
-    申请预订
-</button>-->
 <div class="riopptions__error-msg js-order-price-error-msg">
   
 <div class="retain-warning-block">
@@ -793,9 +789,13 @@
                   var state= 1;
                   $.get("/order", { nub: nub2, id: id,count:count,pr:pr,uid:uid,time:time,state:state },
                           function(data){
-                              alert(data);
-                              location.href="/lists?oname="+nub2;
-                      
+                              if(data=="请先登录"){
+                                  alert(data);
+                              }else{
+                                  alert(data);
+                                  location.href="/lists?oname="+nub2;
+                              }
+
                           });
               })
           });
