@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
   <div class="header__wrapper">
     <div class="header__logo">
       <div class="navbar-logo">
-  <a href="http://www.fishtrip.cn/">
+  <a href="/">
     <img alt="大鱼自助游" src="img/img/yueyixia.png" title="大鱼自助游" height="31" width="54">
 </a></div>
 
@@ -39,18 +39,18 @@ jQuery(document).ready(function($) {
 <div class="header__user-menu js-home-nav-guest-menu">
         <ul class="fishui-list fishui-list--inline navbar-user-menu">
   <li class="flist__item navbar-menu-hot">
-    <a href="javascript:;" class="header__link js-show-app-modal" rel="nofollow"><i class="iconfont icon-iphone"></i>下载大鱼APP</a>
+    <a href="javascript:;" class="header__link js-show-app-modal" rel="nofollow"><i class="iconfont icon-iphone"></i>下载约一下APP</a>
   </li>
   <li class="flist__item navbar-menu-hot">
-    <a href="http://www.fishtrip.cn/preferentials/" class="header__link" target="_blank">我的钱包</a>
+    <a href="/money" class="header__link" target="_blank">我的钱包</a>
   </li>
   <li class="flist__item"><a href="/myorder" class="header__link">订单</a></li>
   <li class="flist__item"><a href="/collection" class="header__link">收藏</a></li>
-  <li class="flist__item"><a href="/" class="header__link">我的好友</a></li>
+  <li class="flist__item"><a href="/chat" class="header__link">我的好友</a></li>
   <li class="flist__item">
     <div class="user-menu user_logged_in dropdown">
   <a class="umenu__button user-avatar dropdown-toggle header__link" data-toggle="dropdown">
-    <img alt="小鱼儿441243495号" class="uavatar__pic" src="http://static03.fishtrip.cn/assets/avatar-default-small-2f53ef89faea912409d250f342324aba.png" height="36" width="36">
+    <img alt="小鱼儿441243495号" class="uavatar__pic" src="img/userlogo/<?php echo session('uimg')?>" height="36" width="36">
     <span class="uavatar__text"><?php echo session('name')?></span>
     <i class="caret umenu__caret"></i>
   </a>
@@ -80,7 +80,7 @@ jQuery(document).ready(function($) {
     <div class="header__user-menu js-home-nav-guest-menu">
         <ul class="fishui-list fishui-list--inline navbar-guest-menu">
   <li class="flist__item navbar-menu-hot">
-    <a href="javascript:;" class="header__link js-show-app-modal" rel="nofollow"><i class="iconfont icon-iphone"></i>下载大鱼APP</a>
+    <a href="javascript:;" class="header__link js-show-app-modal" rel="nofollow"><i class="iconfont icon-iphone"></i>下载约一下APP</a>
   </li>
   <li class="flist__item navbar-menu-hot">
     <a href="/money" class="header__link" target="_blank">我的钱包</a>
@@ -100,7 +100,7 @@ jQuery(document).ready(function($) {
 <div class="navbar-search js-navbar-search is-active">
   <form accept-charset="UTF-8" action="/search" class="nsearch__wrap nsearch__form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" value="✓" type="hidden"></div>
     <span class="nsearch__icon-pin yicon-place-pin"></span>
-    <input class="nsearch__text jnsearch__input" data-placeholder="台湾 - 花莲" id="q" name="q" value="台湾 - 花莲" type="text">
+    <input class="nsearch__text jnsearch__input" data-placeholder="北京 - " id="q" name="q" value="北京 - " type="text">
     <button class="nsearch__icon-search jnsearch__btn jnsearch__popup">
       <span class="yicon-search-nav"></span>
 </button></form>  <div class="nsearch__selector">
@@ -158,8 +158,8 @@ jQuery(document).ready(function($) {
   <li class="flist__item">
     <a href="/like" class="header__link" target="_blank">大家喜欢</a>
   </li>
-  <li class="flist__item"><a href="/feedback" class="header__link" target="_blank">大鱼旅行猎人</a></li>
-  <li class="flist__item"><a href="http://www.fishtrip.cn/shareholder/" class="header__link" target="_blank">大鱼股东计划</a></li>
+  <li class="flist__item"><a href="/feedback" class="header__link" target="_blank">旅行猎人</a></li>
+  <li class="flist__item"><a href="http://www.fishtrip.cn/shareholder/" class="header__link" target="_blank">约一下股东计划</a></li>
 </ul>
 
     </div>
@@ -175,11 +175,11 @@ jQuery(document).ready(function($) {
 
       <div class="seo-navigator">
 
-    <a href="http://www.fishtrip.cn/">首页</a>
-        &gt;<a href="http://www.fishtrip.cn/taiwan/">台湾</a>
+    <a href="/">首页</a>
+        &gt;<a href="/search">北京</a>
 
-        &gt;<a href="http://www.fishtrip.cn/taiwan/hualian/">花莲</a>
-        &gt;<span>波斯菊乐活馆</span>       
+        &gt;<a href="/search?aid=1">西城区</a>
+        <!--&gt;<span>波斯菊乐活馆</span> -->      
 </div>
 
 </div>
@@ -200,8 +200,12 @@ jQuery(document).ready(function($) {
                      <li><strong>用户名：</strong><input class="ipt" type="text" name="name"  size="20" /></li>
                      <li><strong>密码：</strong><input class="ipt" type="password" name="pwd"  size="20" /></li>
 						<input type="hidden" name="_token" value="{{csrf_token()}}" />
+						<li><strong>验证码：</strong><input type="text" name="captcha" class="ipt1" >
+						<a onclick="javascript:re_captcha();" >
+						<img src="yanzhengma/1"  alt="验证码" title="刷新图片" width="100" height="40" id="c2c98f0de5a04167a9e427d883690ff6" border="0"></a> 
+						</li>
                      <li><input class="btn btn-primary" type="submit" name="submit" value=" 登 录 " /></li>
-					 <li>使用第三方登陆</li>
+					
 					 <!-- 授权按钮 -->
 					 <?php
 							include_once( 'libweibo-master/config.php' );
@@ -218,6 +222,14 @@ jQuery(document).ready(function($) {
      </div>
 </div>
  <script type="text/javascript">
+
+//验证码
+  function re_captcha() {
+    $url = "yanzhengma";
+        $url = $url + "/" + Math.random();
+        document.getElementById('c2c98f0de5a04167a9e427d883690ff6').src=$url;
+  }
+
  //qq授权
 			  var childWindow;
             function toQzoneLogin()
@@ -242,8 +254,8 @@ jQuery(document).ready(function($) {
                 <ol>
                      <li><h4>注册约一下！</h4></li>
                      <li><strong>手机号：</strong><input class="ipt" type="text" name="tel"  size="20" placeholder='请输入您的手机号' id='tel'/><span id='sp_tel'></span></li>
-					   <li><input class="ipt" type="text"  size="15" placeholder='点击获取验证码'/>
-					   <div class="input-text" data-reactid=".1.1.1.1"><a href="javascript:;" class="input-link disabled" data-reactid=".1.1.1.1.0">获取验证码</a></div>
+					   <li><input class="ipt" type="text"  size="15" placeholder='点击获取验证码' onblur="hq()" id='hq1'/><span id='sp_hq'></span>
+					   <div class="input-text" data-reactid=".1.1.1.1"><a href="javascript:;" class="input-link disabled" data-reactid=".1.1.1.1.0" onclick="get_mobile_code();">获取验证码</a></div>
 					   </li>
                      <li><strong>密码：</strong><input class="ipt" type="password" name="pwd"  size="20"  placeholder='请输入您的密码'  id='pwd'/><span id='sp_pwd'></span></li>
 						<input type="hidden" name="_token" value="{{csrf_token()}}" />
@@ -253,6 +265,14 @@ jQuery(document).ready(function($) {
      </div>
 </div>
 <script type="text/javascript">
+//短信验证码
+		function get_mobile_code(){
+			tel=$('#tel').val();
+        $.get('sms', {mobile:tel}, function(msg) {
+            alert(jQuery.trim(unescape(msg)));
+        });
+	};
+
 	
 	flag=0;
 	$("#login").click(function(){
@@ -262,6 +282,25 @@ jQuery(document).ready(function($) {
 		}
 		return true;
 	})
+
+
+
+	//验证短信验证码
+	function hq(){
+		hq1=$('#hq1').attr('value');
+		$.get('sms',{hq1:hq1},function(data){
+
+			if(data==1){
+				$('#sp_hq').html('ok');
+				flag=1;
+				return flag;
+			}else if(data==0){
+				$('#sp_hq').html('验证码错误！！！');
+				flag=0;
+				return flag;
+			}
+		});
+	}
 //验证手机号
 	$('#tel').blur(function(){
 		var tel=$('#tel').attr('value');

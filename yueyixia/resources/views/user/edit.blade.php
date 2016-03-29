@@ -1,5 +1,3 @@
-
-
 <?php
 	include('common/shezhi_header.php');
 ?>
@@ -44,9 +42,9 @@
     </div>
 
 <script type="text/javascript">
-	flad=0;
+	flag=0;
 	$('#xiugan').click(function(){
-		if(flad==0){
+		if(flag==0){
 			return false;
 		}
 		return true;

@@ -5,6 +5,7 @@ use App\Article;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
+use Input;
  
 use Illuminate\Http\Request;
  
@@ -35,7 +36,6 @@ class OrderController extends Controller {
 		$uid=$_GET['oname'];
 		//echo $uid;die;
 		$arr = DB::table('y_order')->join('y_ticket', 'y_order.tid', '=', 'y_ticket.tid')->join('y_view', 'y_ticket.vid', '=', 'y_view.vid')->where(['y_order.oname'=>$uid])->get();
-		//print_r($arr);die;
 		$address=DB::table('y_address')->get();
 		return view("details/lists",['arr'=>$arr,'address'=>$address]);
 	}
@@ -55,6 +55,16 @@ class OrderController extends Controller {
 			echo "删除成功";
 		}else{
 			echo "删除失败";
+		}
+	}
+	public function pay(){
+		$id = Input::get('id');
+		//echo $id;die;
+		$arr = DB::table('y_order')->where('oid', $id)->update(['ostate' => 0]);
+		if($arr){
+			echo "<script>alert('支付成功');location.href='myorder'</script>";
+		}else{
+			echo "<script>alert('支付失败');location.href='/lists'</script>";
 		}
 	}
 }

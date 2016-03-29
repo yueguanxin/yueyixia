@@ -2,89 +2,77 @@
 	include('common/shezhi_header.php');
 ?>
 
-
+<script type="text/javascript" src="fullAvatarEditor-2.3/scripts/swfobject.js"></script>
+        <script type="text/javascript" src="fullAvatarEditor-2.3/scripts/fullAvatarEditor.js"></script>
   <div class="span10">
     <div class="right-container">
       <h4 class="right-title">更改头像</h4>
 
-      <form novalidate="novalidate" accept-charset="UTF-8" action="/users/YSnm7EJrS0A" class="upload-pic-form profile_form form-horizontal big-par-start" enctype="multipart/form-data" id="edit_user_260266" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" value="✓" type="hidden"><input name="_method" value="put" type="hidden"><input name="authenticity_token" value="JG3luG6Q1yxduunIKzycN0AfHLVPc5fI3c+4Nx3iT5A=" type="hidden"></div>
-
-        
-
-        
-        <div class="row-fluid" id="upload-pic-div">
-          <div class="span12">
-            <div class="span2">
-              <label for="user_avatar">个人头像</label>
-            </div>
-            <div class="span4 pic-upload-field">
-              <input accept="image/png,image/jpeg" id="user_avatar" name="user[avatar]" type="file">
-            </div>
-            <div class="span4">
-                <button class="btn-yu-blue short" id="pic_upload_button" name="button" type="submit">上传照片</button>
-              <span id="avatar_upload_notify" class="avatar-upload-notify">  
-                <a href="#">图片上传中请稍后</a> <img alt="Loading" src="img/shouye/loading-4520216abdb59206dfa10968cd95c955.gif">
-
-              </span>
-            </div>
-          </div>
+     	
+				<p id="swfContainer">
+                    本组件需要安装Flash Player后才可使用，请从<a href="http://www.adobe.com/go/getflashplayer">这里</a>下载安装。
+				</p>
+			</div>
+			<button type="button" id="upload" style="display:none;margin-top:8px;">swf外定义的上传按钮，点击可执行上传保存操作</button>
         </div>
-
-        <div class="row-fluid" id="avatar-display-div">
-          <div class="span6">
-            <div class="avatar-container">
-             
-              <div id="cropbox-container" ,="" style="height: 250px; width: 250px; position: relative; overflow: hidden; background-color: #efefef; margin-top: 20px;">
-
-              </div>
-            </div>
-          </div>
-
-          <div class="span6">
-            <div class="avatar-description">
-              <p>您上传的头像会自动生成三种尺寸，<br>请注意中小尺寸的头像是否清晰</p>
-              <div class="img-container img180">
-                <div class="img">
-                  <img alt="Avatar-default-big" src="img/shouye/avatar-default-big-6d86d3f0580c8b442be8ef5e50327273_002.png" width="180">
-                </div>
-                大尺寸头像 180x180像素          
-              </div>
-              
-              <div class="img-container img50">
-                <div class="img">
-                  <img alt="Avatar-default-big" src="img/shouye/avatar-default-big-6d86d3f0580c8b442be8ef5e50327273.png" width="50">
-                </div>
-                中尺寸头像50x50像素<br>
-                (自动生成) 
-              </div>
-              <div class="img-container img30">
-                <div class="img">
-                  <img alt="Avatar-default-small" src="img/shouye/avatar-default-small-2f53ef89faea912409d250f342324aba.png" width="30">
-                </div>
-                小尺寸头像30x30像素<br>
-                (自动生成) 
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-</form>
-      <form accept-charset="UTF-8" action="/users/YSnm7EJrS0A/crop_avatar" class="form-horizontal" id="edit_user_260266" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" value="✓" type="hidden"><input name="_method" value="put" type="hidden"><input name="authenticity_token" value="JG3luG6Q1yxduunIKzycN0AfHLVPc5fI3c+4Nx3iT5A=" type="hidden"></div>  
-          <input id="crop_x" name="user[avatar][crop_x]" type="hidden">  
-          <input id="crop_y" name="user[avatar][crop_y]" type="hidden">  
-          <input id="crop_w" name="user[avatar][crop_w]" type="hidden">  
-          <input id="crop_h" name="user[avatar][crop_h]" type="hidden">  
-          <div class="yu-form-actions crop-refresh">
-          <button class="btn-yu-blue" name="button" type="submit">更新</button>
-          </div>
-</form>       
-    </div>
-  </div>
-</div>
-
-
-    </div>
+		<script type="text/javascript">
+            swfobject.addDomLoadEvent(function () {
+				//以下两行代码正式环境下请删除
+				if(location.href.indexOf('http://') == -1) 
+				alert('请于WEB服务器环境中查看、测试！\n\n既 http://*/simpleDemo.html\n\n而不是本地路径 file:///*/simpleDemo.html的方式');
+				var swf = new fullAvatarEditor("fullAvatarEditor-2.3/fullAvatarEditor.swf", "fullAvatarEditor-2.3/expressInstall.swf", "swfContainer", {
+					    id : 'swf',
+						upload_url : 'upload_add?userid=14&username="刘亚丹"',	//上传接口
+						method : 'get',	//传递到上传接口中的查询参数的提交方式。更改该值时，请注意更改上传接口中的查询参数的接收方式
+						src_upload : 2,		//是否上传原图片的选项，有以下值：0-不上传；1-上传；2-显示复选框由用户选择
+						avatar_box_border_width : 0,
+						avatar_sizes : '100*100|50*50|32*32',
+						avatar_sizes_desc : '100*100像素|50*50像素|32*32像素'
+					}, function (msg) {
+						switch(msg.code)
+						{
+							case 1 : alert("页面成功加载了组件！");break;
+							case 2 : 
+								alert("已成功加载图片到编辑面板。");
+								document.getElementById("upload").style.display = "inline";
+								break;
+							case 3 :
+								if(msg.type == 0)
+								{
+									alert("摄像头已准备就绪且用户已允许使用。");
+								}
+								else if(msg.type == 1)
+								{
+									alert("摄像头已准备就绪但用户未允许使用！");
+								}
+								else
+								{
+									alert("摄像头被占用！");
+								}
+							break;
+							case 5 : 
+								if(msg.type == 0)
+								{
+									if(msg.content.sourceUrl)
+									{
+										alert("原图已成功保存至服务器，url为：\n" +　msg.content.sourceUrl+"\n\n" + "头像已成功保存至服务器，url为：\n" + msg.content.avatarUrls.join("\n\n")+"\n\n传递的userid="+msg.content.userid+"&username="+msg.content.username);
+									}
+									else
+									{
+										alert("头像已成功保存至服务器，url为：\n" + msg.content.avatarUrls.join("\n\n")+"\n\n传递的userid="+msg.content.userid+"&username="+msg.content.username);
+									}
+								}
+							break;
+						}
+					}
+				);
+				document.getElementById("upload").onclick=function(){
+					swf.call("upload");
+				};
+            });
+			var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+			document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5f036dd99455cb8adc9de73e2f052f72' type='text/javascript'%3E%3C/script%3E"));
+        </script>
 
 
     

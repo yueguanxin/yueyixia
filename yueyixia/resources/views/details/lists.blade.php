@@ -2,8 +2,9 @@
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-<script src="%E9%A2%84%E8%AE%A2%E6%9C%8D%E5%8A%A1%20-%20%E5%A4%A7%E9%B1%BC%E8%87%AA%E5%8A%A9%E6%B8%B8_files/v.htm" charset="utf-8"></script><script src="js/ec.js" async="" type="text/javascript"></script><script src="js/tracker_ex.js" async=""></script><script src="js/tracker.js" async=""></script><script src="js/analytics.js" async=""></script><script src="js/hm.js"></script><script type="text/javascript">window.BWEUM||(BWEUM={});BWEUM.info={"beacon":"bi-collector.oneapm.com/beacon/rum/ruby","errorBeacon":"bi-collector.oneapm.com/beacon/error/ruby","licenseKey":"J6YrM~vV2VrFaRj3","applicationID":2279631,"transactionName":"ExIBGTAnXyQgDzpeXCpYCyI3NVQILh4qUkE3WA0oNQ==","queueTime":0,"applicationTime":278,"agent":"//bi-collector.oneapm.com/static/js/bw-send-411.4.5.js"}</script>
+<script src="" charset="utf-8"></script><script src="js/ec.js" async="" type="text/javascript"></script><script src="js/tracker_ex.js" async=""></script><script src="js/tracker.js" async=""></script><script src="js/analytics.js" async=""></script><script src="js/hm.js"></script><script type="text/javascript">window.BWEUM||(BWEUM={});BWEUM.info={"beacon":"bi-collector.oneapm.com/beacon/rum/ruby","errorBeacon":"bi-collector.oneapm.com/beacon/error/ruby","licenseKey":"J6YrM~vV2VrFaRj3","applicationID":2279631,"transactionName":"ExIBGTAnXyQgDzpeXCpYCyI3NVQILh4qUkE3WA0oNQ==","queueTime":0,"applicationTime":278,"agent":"//bi-collector.oneapm.com/static/js/bw-send-411.4.5.js"}</script>
 <script type="text/javascript" src="js/bw-loader-411.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta name="author" content="webmaster@fishtrip.cn">
@@ -18,41 +19,10 @@
 <meta content="10AAkGWeD3MG+P1bZUHU7V16kleKGhoKZc+lBXGBQnc=" name="csrf-token">
     <!--[if lte IE 8]>
       <link href="http://static04.fishtrip.cn/assets/ng/vdayu_ie-d2ceb5b6da55e49dfd3724d1479d219b.css" media="screen" rel="stylesheet" type="text/css" />
-      <script src="http://static03.fishtrip.cn/assets/ng/3rd/html5-083899362ed59cc279451ac430aa737d.js" type="text/javascript"></script>
-      <script src="https://cdn.jsdelivr.net/es5.shim/4.4.1/es5-shim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/es5.shim/4.4.1/es5-sham.min.js"></script>
+      <script src="js/assets/ng/3rd/html5-083899362ed59cc279451ac430aa737d.js" type="text/javascript"></script>
+      <script src="js/4.4.1/es5-shim.min.js"></script>
+      <script src="js/4.4.1/es5-sham.min.js"></script>
     <![endif]-->
-
-    
-    <script type="text/javascript">
-  var _hmt = _hmt || [];
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "//hm.baidu.com/hm.js?c150f692997ee7d711646dff27fbfcaf";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-  })();
-
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-33905412-1', {'userId': '260266'});
-
-  ga('require', 'ec');
-  ga('require', 'displayfeatures');
-</script>
-
-<script>
-  (function(i,s,o,g,r,a,m){
-    i['fishTrackerObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//analytics.fishtrip.cn/tracker.js','fa');
-
-    fa('set', 'user_id', 260266);
-</script>
  <?php
   include('common/head.php');
  ?>
@@ -97,21 +67,28 @@
             </div>
 
             <div class="order-detail-order-submit">
-                <button class="yu-btn yu-btn--buy oform-sumbit__submit js-house-order-submit" data-house-id="yTxO28u95mM" data-disable-with="提交中...">
+                @if($arr[0]['ostate'] == 1)
+                <button class="yu-btn yu-btn--buy oform-sumbit__submit js-house-order-submit" data-house-id="yTxO28u95mM" data-disable-with="提交中..." onclick="fun(<?php echo $arr[0]['oid']; ?>);">
                     去支付
                 </button>
+                    @elseif($arr[0]['ostate'] == 0)
+                    <button class="yu-btn yu-btn--buy oform-sumbit__submit js-house-order-submit" data-house-id="yTxO28u95mM" data-disable-with="提交中..." >
+                        等待发货中...
+                    </button>
+                @elseif($arr[0]['ostate'] == 2)
+                    <button class="yu-btn yu-btn--buy oform-sumbit__submit js-house-order-submit" data-house-id="yTxO28u95mM" data-disable-with="提交中..." >
+                        确定收货
+                    </button>
+                @elseif($arr[0]['ostate'] == 3)
+                    <button class="yu-btn yu-btn--buy oform-sumbit__submit js-house-order-submit" data-house-id="yTxO28u95mM" data-disable-with="提交中..." onclick="gocon(<?php echo $arr[0]['oid']; ?>)">
+                        去评论
+                    </button>
+                    @endif
             </div>
         </div>
     </div>
   </div></div>
     <div class="ooverview__info">
-
-
-
-
-
-
-  
   
   <input id="utm" name="utm" type="hidden">
   <input id="room_rate_plan_id" name="room_rate_plan_id" value="155318" type="hidden">
@@ -277,9 +254,18 @@
   </div>
 </div>
 
-<div class="footer-misc-group">
-  <div class="fmgroup__wrap">
-    <div class="fmgroup__item">
        <?php
   include('common/footer.php');
 ?>
+  </body>
+</html>
+<script type="text/javascript">
+    function fun(id){
+        location.href="/pay?id="+id;
+    }
+    function gocon(id){
+        location.href="/details?oid="+id+"&test="+1;
+    }
+
+</script>
+

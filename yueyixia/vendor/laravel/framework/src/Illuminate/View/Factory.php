@@ -658,6 +658,8 @@ class Factory implements FactoryContract {
 	 */
 	public function flushSections()
 	{
+		$this->renderCount = 0;
+
 		$this->sections = array();
 
 		$this->sectionStack = array();
@@ -863,6 +865,17 @@ class Factory implements FactoryContract {
 	public function getShared()
 	{
 		return $this->shared;
+	}
+
+	/**
+	 * Check if section exists.
+	 *
+	 * @param  string  $name
+	 * @return bool
+	 */
+	public function hasSection($name)
+	{
+		return array_key_exists($name, $this->sections);
 	}
 
 	/**

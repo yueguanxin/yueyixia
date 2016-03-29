@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta name="author" content="webmaster@fishtrip.cn">
-    <title>小鱼儿441243495号优惠中心 - 大鱼自助游</title>
+    <title>约一下"<?php echo $uname?>"号我的钱包中心</title>
 <meta content="小鱼儿441243495号在大鱼的优惠中心, 随时随地查看,监控小鱼儿441243495号的优惠券和收益." name="description">
 <meta content="小鱼儿441243495号优惠券, 小鱼儿441243495号收益, 小鱼儿441243495号现金." name="keywords">
 
@@ -60,45 +60,10 @@
   <body class="">
     
 
+   <?php
+    include('common/moneyhead.php');
+  ?>
 
- 
-    <?php
-		include('common/head.php');
-	?>
-  
- 
-
-
-    
-
-
-<div class="preferential-page">
-
-  <div class="preferential-page-banner is-active">
-  <div class="ppbanner__title is-active">
-    我的钱包
-  </div>
-  <div class="ppbanner__desc is-active">
-    旅途不停，优惠不止
-  </div>
-  <a href="#global/login" class="ppbanner__button is-active" data-url="/login">登录后查看</a>
-</div>
-
-    
-<div class="ng-pages-nav">
-  <ul class="npnav__list ng-pages-nav-list fishui-list fishui-list--inline js-ng-pages-nav-list">
-      <li class="npnlist__item flist__item js-ng-pages-nav-item active">
-        <a href="http://www.fishtrip.cn/preferentials/">概览</a>
-      </li>
-      <li class="npnlist__item flist__item js-ng-pages-nav-item ">
-        <a href="http://www.fishtrip.cn/preferentials/cash/">现金</a>
-      </li>
-      <li class="npnlist__item flist__item js-ng-pages-nav-item ">
-        <a href="http://www.fishtrip.cn/preferentials/coupon/">优惠券</a>
-      </li>
-    <div style="left: 15px; width: 58px;" class="npnlist__indicator js-ng-pages-nav-indicator"></div>
-  </ul>
-</div>
 
 
     <div class="ppage__summary">
@@ -119,7 +84,8 @@
           <span> 元 </span>
         </div>
         <div class="ppscdtotal__link">
-          <a href="http://www.fishtrip.cn/preferentials/cash/">可提现 0.00元</a>
+          <a href="/xianjin">
+             <?php echo $arr['money']?>元</a>
         </div>
       </div>
 
@@ -157,7 +123,7 @@
         <span> 元 </span>
       </div>
       <div class="ppscdesc__links preferential-summary-coupon-links">
-        <a href="http://www.fishtrip.cn/preferentials/coupon/" class="psclinks__item">0张可使用</a>
+        <a href="/youhuiquan" class="psclinks__item">0张可使用</a>
 
       </div>
 
@@ -168,7 +134,8 @@
 
     </div>
 
-  <div class="ppage__title">
+
+    <div class="ppage__title">
     获得更多优惠
   </div>
 
@@ -232,59 +199,9 @@
   </div>
 </div>
 
-
-    
 <?php
-	include('common/footer.php');
-?>
+    include('common/moneyfooter.php');
+  ?>
 
-<a class="footer-agent js-footer-affix js-footer-agent">
-  <div class="fagent__icon-block">
-    <span class="yicon-help-weixin"></span>
-  </div>
-</a>
-
-<div class="footer-agent-popover js-footer-agent-popover print-hide">
-  <!--<a class="fapopover__close js-close-footer-agent">
-    <span class="yicon-slide-right-blue"></span>
-  </a>-->
-  <div class="fapopover__title">
-    大鱼微信客服
-  </div>
-  <div class="fapopover__qrcode">
-    <img alt="大鱼微信客服" src="img/money/footer-weixin-qrcode.png" title="大鱼微信客服" height="106" width="106">
-  </div>
-  <div class="fapopover__tips">
-    每日9:00~21:00
-  </div>
-</div>
-
-
-
-
-
-
-<div class="footer-advertise js-footer-advertise is-active">
-  <a href="http://www.fishtrip.cn/articles/157-new-year-coupon" class="gtm-ad fadvertise__image" target="_blank"></a>
-  <a href="javascript:void(0);" class="fadvertise__close js-footer-advertise-close gtm-ad-close" data-url="http://www.fishtrip.cn/hide_footer_advertise">
-    <span> × </span>
-</a></div>
-
-
-
-    <script src="js/jquery.js" type="text/javascript"></script>
-<script src="js/bootstrap.js" type="text/javascript"></script>
-
-    <script src="js/base.js" type="text/javascript"></script>
-    <script src="js/common.js" type="text/javascript"></script><div id="react-sessions-modal" style="display: none"><div class="react-sessions react-sessions-modal" id="sessions-modal-root" data-reactid=".0"></div></div>
-
-    <script src="js/vdayu_v3-e6850c4b2d6cf420d92facf4a168e173.js" type="text/javascript"></script>
-    <!--[if lte IE 9]>
-      <script src="http://static04.fishtrip.cn/assets/ng/vdayu_ie-556e92d829dd48645eadf5768227720b.js" type="text/javascript"></script>
-    <![endif]-->
-
-    
-    
-  
 
 </body></html>

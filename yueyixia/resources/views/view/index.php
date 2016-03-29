@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta name="author" content="webmaster@fishtrip.cn">
-    <title>『波斯菊乐活馆』波斯菊乐活馆217元起|评价|房型图片|路线 - 大鱼自助游</title>
+    <title><?php echo $vname?>|评价|景点图片|路线|好友</title>
 <meta content="大鱼自助游提供波斯菊乐活馆查询以及免费预订等服务，您可以查询波斯菊乐活馆的价格、评价、房型、详细路线等，线上支付，安全有保障." name="description">
 <meta content="『波斯菊乐活馆』波斯菊乐活馆217元起|评价|房型图片|路线" name="keywords">
 
@@ -129,7 +129,7 @@
     <div class="hstabs__wrap">
       <ul class="nav hstabs__nav resource-tabs">
         <li class="active"><a href="#house_show_summary">概要</a></li>
-        <li class=""><a href="#house_show_date_select">景点</a></li>
+        <li class=""><a href="#house_show_date_select">一起要去的好友</a></li>
         <li class=""><a href="#house_show_policy">协议</a></li>
         <li class=""><a href="#house_show_rates">点评</a></li>
         <li class=""><a href="#house_show_location">位置</a></li>
@@ -533,69 +533,24 @@
   </div>
 
   <div id="house_show_date_select" class="house-show-section house-show-section--gray hspage__datepicker house-show-datepicker js_house_show_date_select">
-    <h2 class="hssection__title hsdatepicker__title">选择要去的景点</h2>
+    <h2 class="hssection__title hsdatepicker__title">一起去的好友</h2>
     <form accept-charset="UTF-8" action="/houses/2PWdJzondtc" class="edit_house" id="edit_house_1704" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" value="✓" type="hidden"></div>
       <div class="hdatepicker__section">
-        <span class="hdatepicker__selector">
-          要郊游的日期
-          <input class="hdatepicker__input js_house_show_datepicker_input js_house_show_datepicker_checkin" id="start_day" name="start_day" placeholder="开始" readonly="readonly" type="text">
-          <span class="hdatepicker__weekday js_house_show_datepicker_weekday">
-          </span>
-          <span class="yicon-ng-calender hdatepicker__calender js_house_show_datepicker_calender"></span>
+        <?php foreach($brr as $v){?>
+        <h3><?php echo $v['uname']?></h3>
+        <?php }?>
         </span>
         <span class="hdatepicker__selector">
-          <input class="hdatepicker__input js_house_show_datepicker_input js_house_show_datepicker_checkout" id="end_day" name="end_day" placeholder="结束" readonly="readonly" type="text">
-          <span class="hdatepicker__weekday js_house_show_datepicker_weekday">
-          </span>
-          <span class="yicon-ng-calender hdatepicker__calender js_house_show_datepicker_calender"></span>
-        </span>
+              
+
+      
+        
       </div>
 </form>  </div>
 
 
 
-  <div class="hspage__rooms js-ga-rooms">
-  <?php foreach($brr as $v){?>
-    <ul class="rooms-list js_rooms_list js-ga-rooms-list" data-ga-url="http://www.fishtrip.cn/houses/hm10111332671/" data-ga-name="波斯菊乐活馆">
-
-    <a href="/details?id=<?php echo $v['vid']?>" target="_blank">
-      <li class="rlist__item  js-ga-room" data-url="/houses/hm10111332671/rooms-9898165486.html" data-ga-id="R6563" data-ga-name="静双人房" data-ga-category="台湾/住宿/花莲/波斯菊乐活馆" data-ga-price="217" data-ga-position="0">
-
-<div class="room-item">
-  <div class="ritem__photo lazy">
-      <img style="display: block;" alt="静双人房" class="ritem__img" data-original="http://7o4zic.com5.z0.glb.qiniucdn.com/system/photo/20141227/99540472c53fffd375ff43b57186a628a45cc824.jpg" src="img/img/<?php echo $v['vimg']?>">
-        <div class="ritem__daily-discount">
-            <div class="daily-discount-tag">
-    &nbsp;<span class="dtag__rate">7.9</span><span class="dtag__text">折</span>
-  </div>
-
-        </div>
-  </div>
-  <div class="ritem__content">
-    <div class="ritem__name">
-      <?php echo $v['vname']?>
-    </div>
-    <div class="ritem__device">
-       <?php echo $v['vdescribe']?>
-    </div>
-   <!--  <div class="ritem__price">
-        1晚最低价 ¥217 起
-    </div> -->
-
-    <div data-original-title="输入日期查看详情及价格" class="ritem__cmd js-rooms-item-detail" data-toggle="tooltip" title="">
-      <div class="fishui-button fishui-button--primary ritem__button is-preview">
-        查看
-      </div>
-    </div>
-  </div>
-</div>
-
-
-      </li>
-</a>
-    <a href="http://www.fishtrip.cn/houses/hm10111332671/rooms-9784302379.html" target="_blank">
-      <li class="rlist__item  js-ga-room" data-url="/houses/hm10111332671/rooms-9784302379.html" data-ga-id="R6564" data-ga-name="喜四人房" data-ga-category="台湾/住宿/花莲/波斯菊乐活馆" data-ga-price="309" data-ga-position="1">
-<?php }?>
+  
         
 <!-- <div class="room-item">
   <div class="ritem__photo lazy">
@@ -1492,31 +1447,54 @@
     </div>
   </div>
 
-  <html>
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <style type="text/css">
-        body, html {width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
-        #allmap{width:100%;height:500px;}
-        p{margin-left:5px; font-size:14px;}
-    </style>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=w2qsXQaGZZjxsL9b7N8RB0om"></script>
-    <title>根据关键字本地搜索</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <style type="text/css">
+    body, html{width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
+    #l-map{height:300px;width:100%;}
+    #r-result {width:100%; font-size:14px;line-height:20px;}
+  </style>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=w2qsXQaGZZjxsL9b7N8RB0om"></script>
 </head>
 <body>
-    <div id="allmap"></div>
-    <p>返回关键字的检索结果，并展示在地图上</p>
+  <div id="l-map"></div>
+  <h3>推荐路线:</h3><div id="r-result"></div>
 </body>
 </html>
 <script type="text/javascript">
-    // 百度地图API功能
-    var map = new BMap.Map("allmap");          
-    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
-    var local = new BMap.LocalSearch(map, {
-        renderOptions:{map: map}
-    });
-    local.search("<?php echo $vname;?>");
+  // 百度地图API功能
+  var map = new BMap.Map("l-map"); 
+  map.centerAndZoom(new BMap.Point(116.404, 39.915), 10);
+
+
+  var transit = new BMap.TransitRoute(map, {renderOptions: {map: map},onSearchComplete: function(result){       
+    if (transit.getStatus() == BMAP_STATUS_SUCCESS){
+      var firstPlan = result.getPlan(0);
+      // 绘制步行线路
+      for (var i = 0; i < firstPlan.getNumRoutes(); i++){
+        var walk = firstPlan.getRoute(i);
+        if (walk.getDistance(false) > 0){
+          // 步行线路有可能为0
+          map.addOverlay(new BMap.Polyline(walk.getPath(), {lineColor: "green"}));
+        }
+      }
+      // 绘制公交线路
+      for (i = 0; i < firstPlan.getNumLines(); i++){
+        var line = firstPlan.getLine(i);
+        map.addOverlay(new BMap.Polyline(line.getPath()));
+      }
+      // 输出方案信息
+      var s = [];
+      for (i = 0; i < result.getNumPlans(); i++){
+        s.push((i + 1) + ". " + result.getPlan(i).getDescription(false));
+      }
+      document.getElementById("r-result").innerHTML = s.join("<br/>");
+    }
+  }
+  });
+  transit.search("北京八维研修学院", "<?php echo $vname;?>");
 </script>
 
 

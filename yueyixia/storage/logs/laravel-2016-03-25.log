@@ -1,0 +1,828 @@
+[2016-03-25 00:00:23] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:00:46] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:00:49] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:03:56] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:03:58] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:04:16] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:04:18] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:04:22] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function App\Http\Controllers\random()' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:166
+Stack trace:
+#0 {main}  
+[2016-03-25 00:04:35] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function App\Http\Controllers\random()' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:166
+Stack trace:
+#0 {main}  
+[2016-03-25 00:05:17] local.ERROR: exception 'ErrorException' with message 'rand() expects exactly 2 parameters, 1 given' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:166
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'rand() expects ...', 'D:\\phpStudy\\WWW...', 166, Array)
+#1 D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php(166): rand('99999')
+#2 [internal function]: App\Http\Controllers\IndexController->sms()
+#3 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8287): call_user_func_array(Array, Array)
+#4 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8354): Illuminate\Routing\Controller->callAction('sms', Array)
+#5 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8333): Illuminate\Routing\ControllerDispatcher->call(Object(App\Http\Controllers\IndexController), Object(Illuminate\Routing\Route), 'sms')
+#6 [internal function]: Illuminate\Routing\ControllerDispatcher->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#7 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#8 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#9 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#10 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8334): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#11 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8320): Illuminate\Routing\ControllerDispatcher->callWithinStack(Object(App\Http\Controllers\IndexController), Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'sms')
+#12 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7317): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'App\\Http\\Contro...', 'sms')
+#13 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7288): Illuminate\Routing\Route->runWithCustomDispatcher(Object(Illuminate\Http\Request))
+#14 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6954): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#17 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6955): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#20 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6944): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#21 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6929): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#22 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1935): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#24 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#25 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(12083): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(10785): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11789): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11738): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#33 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(2478): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#34 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#37 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1891): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#38 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1880): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#39 D:\phpStudy\WWW\yueyixia\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#40 {main}  
+[2016-03-25 00:05:28] local.ERROR: exception 'ErrorException' with message 'rand() expects exactly 2 parameters, 1 given' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:166
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'rand() expects ...', 'D:\\phpStudy\\WWW...', 166, Array)
+#1 D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php(166): rand('99999')
+#2 [internal function]: App\Http\Controllers\IndexController->sms()
+#3 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8287): call_user_func_array(Array, Array)
+#4 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8354): Illuminate\Routing\Controller->callAction('sms', Array)
+#5 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8333): Illuminate\Routing\ControllerDispatcher->call(Object(App\Http\Controllers\IndexController), Object(Illuminate\Routing\Route), 'sms')
+#6 [internal function]: Illuminate\Routing\ControllerDispatcher->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#7 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#8 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#9 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#10 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8334): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#11 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8320): Illuminate\Routing\ControllerDispatcher->callWithinStack(Object(App\Http\Controllers\IndexController), Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'sms')
+#12 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7317): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'App\\Http\\Contro...', 'sms')
+#13 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7288): Illuminate\Routing\Route->runWithCustomDispatcher(Object(Illuminate\Http\Request))
+#14 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6954): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#17 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6955): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#20 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6944): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#21 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6929): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#22 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1935): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#24 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#25 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(12083): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(10785): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11789): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11738): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#33 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(2478): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#34 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#37 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1891): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#38 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1880): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#39 D:\phpStudy\WWW\yueyixia\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#40 {main}  
+[2016-03-25 00:05:33] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:05:35] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:05:41] local.ERROR: exception 'ErrorException' with message 'rand() expects exactly 2 parameters, 1 given' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:166
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'rand() expects ...', 'D:\\phpStudy\\WWW...', 166, Array)
+#1 D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php(166): rand('99999')
+#2 [internal function]: App\Http\Controllers\IndexController->sms()
+#3 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8287): call_user_func_array(Array, Array)
+#4 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8354): Illuminate\Routing\Controller->callAction('sms', Array)
+#5 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8333): Illuminate\Routing\ControllerDispatcher->call(Object(App\Http\Controllers\IndexController), Object(Illuminate\Routing\Route), 'sms')
+#6 [internal function]: Illuminate\Routing\ControllerDispatcher->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#7 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#8 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#9 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#10 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8334): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#11 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8320): Illuminate\Routing\ControllerDispatcher->callWithinStack(Object(App\Http\Controllers\IndexController), Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'sms')
+#12 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7317): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'App\\Http\\Contro...', 'sms')
+#13 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7288): Illuminate\Routing\Route->runWithCustomDispatcher(Object(Illuminate\Http\Request))
+#14 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6954): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#17 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6955): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#20 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6944): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#21 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6929): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#22 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1935): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#24 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#25 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(12083): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(10785): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11789): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11738): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#33 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(2478): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#34 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#37 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1891): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#38 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1880): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#39 D:\phpStudy\WWW\yueyixia\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#40 {main}  
+[2016-03-25 00:05:44] local.ERROR: exception 'ErrorException' with message 'rand() expects exactly 2 parameters, 1 given' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:166
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'rand() expects ...', 'D:\\phpStudy\\WWW...', 166, Array)
+#1 D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php(166): rand('99999')
+#2 [internal function]: App\Http\Controllers\IndexController->sms()
+#3 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8287): call_user_func_array(Array, Array)
+#4 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8354): Illuminate\Routing\Controller->callAction('sms', Array)
+#5 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8333): Illuminate\Routing\ControllerDispatcher->call(Object(App\Http\Controllers\IndexController), Object(Illuminate\Routing\Route), 'sms')
+#6 [internal function]: Illuminate\Routing\ControllerDispatcher->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#7 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#8 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#9 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#10 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8334): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#11 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8320): Illuminate\Routing\ControllerDispatcher->callWithinStack(Object(App\Http\Controllers\IndexController), Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'sms')
+#12 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7317): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'App\\Http\\Contro...', 'sms')
+#13 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7288): Illuminate\Routing\Route->runWithCustomDispatcher(Object(Illuminate\Http\Request))
+#14 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6954): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#15 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#17 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6955): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#20 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6944): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#21 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6929): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#22 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1935): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#23 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#24 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#25 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(12083): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(10785): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11789): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11738): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#33 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(2478): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#34 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#37 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1891): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#38 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1880): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#39 D:\phpStudy\WWW\yueyixia\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#40 {main}  
+[2016-03-25 00:27:34] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:27:36] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:27:57] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:27:59] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:28:33] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:28:35] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:28:50] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:28:53] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:29:43] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:29:45] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:30:18] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:30:20] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:45:17] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:45:20] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:50:45] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:50:48] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:51:52] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:51:53] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:55:08] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:55:22] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:55:25] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:56:49] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:57:54] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 00:57:57] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Gregwar\Captcha\CaptchaBuilder' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:63
+Stack trace:
+#0 {main}  
+[2016-03-25 01:24:20] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in D:\phpStudy\WWW\yueyixia\vendor\laravel\framework\src\Illuminate\Foundation\Console\ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2016-03-25 01:25:36] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in D:\phpStudy\WWW\yueyixia\vendor\laravel\framework\src\Illuminate\Foundation\Console\ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2016-03-25 01:27:58] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in D:\phpStudy\WWW\yueyixia\vendor\laravel\framework\src\Illuminate\Foundation\Console\ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2016-03-25 01:55:36] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in D:\phpStudy\WWW\yueyixia\vendor\laravel\framework\src\Illuminate\Foundation\Console\ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2016-03-25 01:59:08] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in D:\phpStudy\WWW\yueyixia\vendor\laravel\framework\src\Illuminate\Foundation\Console\ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2016-03-25 02:00:19] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in D:\phpStudy\WWW\yueyixia\vendor\laravel\framework\src\Illuminate\Foundation\Console\ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2016-03-25 02:07:28] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in D:\phpStudy\WWW\yueyixia\vendor\laravel\framework\src\Illuminate\Foundation\Console\ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2016-03-25 02:09:05] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in D:\phpStudy\WWW\yueyixia\vendor\laravel\framework\src\Illuminate\Foundation\Console\ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2016-03-25 02:15:40] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in D:\phpStudy\WWW\yueyixia\vendor\laravel\framework\src\Illuminate\Foundation\Console\ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2016-03-25 02:50:11] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in D:\phpStudy\WWW\yueyixia\vendor\laravel\framework\src\Illuminate\Foundation\Console\ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2016-03-25 02:58:27] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in D:\phpStudy\WWW\yueyixia\vendor\laravel\framework\src\Illuminate\Foundation\Console\ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2016-03-25 02:59:16] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in D:\phpStudy\WWW\yueyixia\vendor\laravel\framework\src\Illuminate\Foundation\Console\ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2016-03-25 02:59:40] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in D:\phpStudy\WWW\yueyixia\vendor\laravel\framework\src\Illuminate\Foundation\Console\ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2016-03-25 03:00:16] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in D:\phpStudy\WWW\yueyixia\vendor\laravel\framework\src\Illuminate\Foundation\Console\ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2016-03-25 03:00:58] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in D:\phpStudy\WWW\yueyixia\vendor\laravel\framework\src\Illuminate\Foundation\Console\ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2016-03-25 03:02:10] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Foundation\Application::getCachedCompilePath()' in D:\phpStudy\WWW\yueyixia\vendor\laravel\framework\src\Illuminate\Foundation\Console\ClearCompiledCommand.php:28
+Stack trace:
+#0 {main}  
+[2016-03-25 06:14:06] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\Session' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:69
+Stack trace:
+#0 {main}  
+[2016-03-25 08:35:01] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\Session' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:69
+Stack trace:
+#0 {main}  
+[2016-03-25 08:35:10] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\Session' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:69
+Stack trace:
+#0 {main}  
+[2016-03-25 10:44:23] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\Session' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:69
+Stack trace:
+#0 {main}  
+[2016-03-25 10:44:31] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\Session' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:69
+Stack trace:
+#0 {main}  
+[2016-03-25 10:46:57] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\Session' not found' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:69
+Stack trace:
+#0 {main}  
+[2016-03-25 11:06:39] local.ERROR: exception 'ErrorException' with message 'Undefined variable: code_url' in D:\phpStudy\WWW\yueyixia\public\common\head.php:210
+Stack trace:
+#0 D:\phpStudy\WWW\yueyixia\public\common\head.php(210): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', 'D:\\phpStudy\\WWW...', 210, Array)
+#1 D:\phpStudy\WWW\yueyixia\storage\framework\views\3b4afc26d290c1534be12ce520334e71(63): include('D:\\phpStudy\\WWW...')
+#2 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(13650): include('D:\\phpStudy\\WWW...')
+#3 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(13683): Illuminate\View\Engines\PhpEngine->evaluatePath('D:\\phpStudy\\WWW...', Array)
+#4 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(13523): Illuminate\View\Engines\CompilerEngine->get('D:\\phpStudy\\WWW...', Array)
+#5 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(13510): Illuminate\View\View->getContents()
+#6 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(13501): Illuminate\View\View->renderContents()
+#7 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(14597): Illuminate\View\View->render()
+#8 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(14126): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#9 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7154): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#10 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6954): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#11 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#13 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#15 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6955): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#16 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6944): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#17 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6929): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#18 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1935): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#19 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#20 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#21 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(12083): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(10785): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11789): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11738): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(2478): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#33 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1891): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#34 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1880): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#35 D:\phpStudy\WWW\yueyixia\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#36 {main}
+
+Next exception 'ErrorException' with message 'Undefined variable: code_url (View: D:\phpStudy\WWW\yueyixia\resources\views\search\index.blade.php)' in D:\phpStudy\WWW\yueyixia\public\common\head.php:210
+Stack trace:
+#0 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(13652): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(ErrorException), 1)
+#1 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(13683): Illuminate\View\Engines\PhpEngine->evaluatePath('D:\\phpStudy\\WWW...', Array)
+#2 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(13523): Illuminate\View\Engines\CompilerEngine->get('D:\\phpStudy\\WWW...', Array)
+#3 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(13510): Illuminate\View\View->getContents()
+#4 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(13501): Illuminate\View\View->renderContents()
+#5 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(14597): Illuminate\View\View->render()
+#6 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(14126): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7154): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#8 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6954): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#9 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#11 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#13 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6955): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#14 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6944): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#15 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6929): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#16 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1935): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#18 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(12083): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(10785): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11789): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11738): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(2478): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#31 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1891): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#32 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1880): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#33 D:\phpStudy\WWW\yueyixia\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#34 {main}  
+[2016-03-25 11:12:23] local.ERROR: exception 'ErrorException' with message 'include(common/head.php): failed to open stream: No such file or directory' in D:\phpStudy\WWW\yueyixia\storage\framework\views\3b4afc26d290c1534be12ce520334e71:63
+Stack trace:
+#0 D:\phpStudy\WWW\yueyixia\storage\framework\views\3b4afc26d290c1534be12ce520334e71(63): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'include(common/...', 'D:\\phpStudy\\WWW...', 63, Array)
+#1 D:\phpStudy\WWW\yueyixia\storage\framework\views\3b4afc26d290c1534be12ce520334e71(63): include()
+#2 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(13650): include('D:\\phpStudy\\WWW...')
+#3 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(13683): Illuminate\View\Engines\PhpEngine->evaluatePath('D:\\phpStudy\\WWW...', Array)
+#4 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(13523): Illuminate\View\Engines\CompilerEngine->get('D:\\phpStudy\\WWW...', Array)
+#5 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(13510): Illuminate\View\View->getContents()
+#6 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(13501): Illuminate\View\View->renderContents()
+#7 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(14597): Illuminate\View\View->render()
+#8 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(14126): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#9 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7154): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#10 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6954): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#11 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#13 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#15 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6955): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#16 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6944): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#17 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6929): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#18 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1935): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#19 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#20 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#21 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(12083): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(10785): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11789): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11738): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(2478): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#33 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1891): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#34 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1880): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#35 D:\phpStudy\WWW\yueyixia\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#36 {main}
+
+Next exception 'ErrorException' with message 'include(common/head.php): failed to open stream: No such file or directory (View: D:\phpStudy\WWW\yueyixia\resources\views\search\index.blade.php)' in D:\phpStudy\WWW\yueyixia\storage\framework\views\3b4afc26d290c1534be12ce520334e71:63
+Stack trace:
+#0 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(13652): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(ErrorException), 1)
+#1 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(13683): Illuminate\View\Engines\PhpEngine->evaluatePath('D:\\phpStudy\\WWW...', Array)
+#2 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(13523): Illuminate\View\Engines\CompilerEngine->get('D:\\phpStudy\\WWW...', Array)
+#3 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(13510): Illuminate\View\View->getContents()
+#4 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(13501): Illuminate\View\View->renderContents()
+#5 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(14597): Illuminate\View\View->render()
+#6 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(14126): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7154): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#8 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6954): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#9 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#11 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#13 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6955): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#14 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6944): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#15 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6929): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#16 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1935): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#18 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(12083): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(10785): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11789): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11738): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(2478): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#31 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1891): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#32 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1880): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#33 D:\phpStudy\WWW\yueyixia\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#34 {main}  
+[2016-03-25 11:35:38] local.ERROR: exception 'ErrorException' with message 'Undefined index: hq1' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:167
+Stack trace:
+#0 D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php(167): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined index...', 'D:\\phpStudy\\WWW...', 167, Array)
+#1 [internal function]: App\Http\Controllers\IndexController->sms()
+#2 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8287): call_user_func_array(Array, Array)
+#3 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8354): Illuminate\Routing\Controller->callAction('sms', Array)
+#4 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8333): Illuminate\Routing\ControllerDispatcher->call(Object(App\Http\Controllers\IndexController), Object(Illuminate\Routing\Route), 'sms')
+#5 [internal function]: Illuminate\Routing\ControllerDispatcher->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#6 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#7 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#8 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#9 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8334): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#10 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8320): Illuminate\Routing\ControllerDispatcher->callWithinStack(Object(App\Http\Controllers\IndexController), Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'sms')
+#11 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7317): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'App\\Http\\Contro...', 'sms')
+#12 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7288): Illuminate\Routing\Route->runWithCustomDispatcher(Object(Illuminate\Http\Request))
+#13 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6954): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#14 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#16 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#18 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6955): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#19 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6944): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#20 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6929): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#21 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1935): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#23 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#24 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(12083): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(10785): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11789): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11738): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(2478): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#36 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1891): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#37 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1880): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#38 D:\phpStudy\WWW\yueyixia\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#39 {main}  
+[2016-03-25 11:37:01] local.ERROR: exception 'ErrorException' with message 'Undefined index: hq1' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:167
+Stack trace:
+#0 D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php(167): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined index...', 'D:\\phpStudy\\WWW...', 167, Array)
+#1 [internal function]: App\Http\Controllers\IndexController->sms()
+#2 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8287): call_user_func_array(Array, Array)
+#3 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8354): Illuminate\Routing\Controller->callAction('sms', Array)
+#4 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8333): Illuminate\Routing\ControllerDispatcher->call(Object(App\Http\Controllers\IndexController), Object(Illuminate\Routing\Route), 'sms')
+#5 [internal function]: Illuminate\Routing\ControllerDispatcher->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#6 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#7 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#8 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#9 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8334): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#10 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8320): Illuminate\Routing\ControllerDispatcher->callWithinStack(Object(App\Http\Controllers\IndexController), Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'sms')
+#11 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7317): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'App\\Http\\Contro...', 'sms')
+#12 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7288): Illuminate\Routing\Route->runWithCustomDispatcher(Object(Illuminate\Http\Request))
+#13 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6954): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#14 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#16 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#18 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6955): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#19 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6944): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#20 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6929): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#21 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1935): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#23 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#24 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(12083): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(10785): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11789): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11738): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(2478): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#36 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1891): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#37 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1880): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#38 D:\phpStudy\WWW\yueyixia\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#39 {main}  
+[2016-03-25 13:13:01] local.ERROR: exception 'ErrorException' with message 'Undefined index: hq1' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:165
+Stack trace:
+#0 D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php(165): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined index...', 'D:\\phpStudy\\WWW...', 165, Array)
+#1 [internal function]: App\Http\Controllers\IndexController->sms()
+#2 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8287): call_user_func_array(Array, Array)
+#3 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8354): Illuminate\Routing\Controller->callAction('sms', Array)
+#4 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8333): Illuminate\Routing\ControllerDispatcher->call(Object(App\Http\Controllers\IndexController), Object(Illuminate\Routing\Route), 'sms')
+#5 [internal function]: Illuminate\Routing\ControllerDispatcher->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#6 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#7 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#8 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#9 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8334): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#10 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8320): Illuminate\Routing\ControllerDispatcher->callWithinStack(Object(App\Http\Controllers\IndexController), Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'sms')
+#11 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7317): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'App\\Http\\Contro...', 'sms')
+#12 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7288): Illuminate\Routing\Route->runWithCustomDispatcher(Object(Illuminate\Http\Request))
+#13 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6954): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#14 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#16 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#18 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6955): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#19 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6944): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#20 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6929): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#21 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1935): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#23 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#24 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(12083): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(10785): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11789): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11738): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(2478): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#36 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1891): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#37 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1880): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#38 D:\phpStudy\WWW\yueyixia\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#39 {main}  
+[2016-03-25 13:13:02] local.ERROR: exception 'ErrorException' with message 'Undefined index: hq1' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:165
+Stack trace:
+#0 D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php(165): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined index...', 'D:\\phpStudy\\WWW...', 165, Array)
+#1 [internal function]: App\Http\Controllers\IndexController->sms()
+#2 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8287): call_user_func_array(Array, Array)
+#3 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8354): Illuminate\Routing\Controller->callAction('sms', Array)
+#4 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8333): Illuminate\Routing\ControllerDispatcher->call(Object(App\Http\Controllers\IndexController), Object(Illuminate\Routing\Route), 'sms')
+#5 [internal function]: Illuminate\Routing\ControllerDispatcher->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#6 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#7 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#8 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#9 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8334): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#10 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8320): Illuminate\Routing\ControllerDispatcher->callWithinStack(Object(App\Http\Controllers\IndexController), Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'sms')
+#11 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7317): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'App\\Http\\Contro...', 'sms')
+#12 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7288): Illuminate\Routing\Route->runWithCustomDispatcher(Object(Illuminate\Http\Request))
+#13 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6954): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#14 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#16 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#18 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6955): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#19 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6944): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#20 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6929): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#21 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1935): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#23 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#24 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(12083): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(10785): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11789): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11738): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(2478): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#36 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1891): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#37 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1880): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#38 D:\phpStudy\WWW\yueyixia\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#39 {main}  
+[2016-03-25 13:13:03] local.ERROR: exception 'ErrorException' with message 'Undefined index: hq1' in D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php:165
+Stack trace:
+#0 D:\phpStudy\WWW\yueyixia\app\Http\Controllers\IndexController.php(165): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined index...', 'D:\\phpStudy\\WWW...', 165, Array)
+#1 [internal function]: App\Http\Controllers\IndexController->sms()
+#2 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8287): call_user_func_array(Array, Array)
+#3 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8354): Illuminate\Routing\Controller->callAction('sms', Array)
+#4 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8333): Illuminate\Routing\ControllerDispatcher->call(Object(App\Http\Controllers\IndexController), Object(Illuminate\Routing\Route), 'sms')
+#5 [internal function]: Illuminate\Routing\ControllerDispatcher->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#6 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#7 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#8 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#9 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8334): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#10 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8320): Illuminate\Routing\ControllerDispatcher->callWithinStack(Object(App\Http\Controllers\IndexController), Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'sms')
+#11 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7317): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'App\\Http\\Contro...', 'sms')
+#12 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(7288): Illuminate\Routing\Route->runWithCustomDispatcher(Object(Illuminate\Http\Request))
+#13 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6954): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#14 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#16 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#18 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6955): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#19 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6944): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#20 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(6929): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#21 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1935): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#23 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#24 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(12083): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(10785): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11789): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(11738): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(2478): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8944): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#36 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1891): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#37 D:\phpStudy\WWW\yueyixia\vendor\compiled.php(1880): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#38 D:\phpStudy\WWW\yueyixia\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#39 {main}  
+[2016-03-25 23:50:13] local.ERROR: exception 'InvalidArgumentException' with message 'View [chat.liaotian] not found.' in D:\yueyixia\vendor\compiled.php:12898
+Stack trace:
+#0 D:\yueyixia\vendor\compiled.php(12871): Illuminate\View\FileViewFinder->findInPaths('chat.liaotian', Array)
+#1 D:\yueyixia\vendor\compiled.php(12996): Illuminate\View\FileViewFinder->find('chat.liaotian')
+#2 D:\yueyixia\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(592): Illuminate\View\Factory->make('chat/liaotian', Array, Array)
+#3 D:\yueyixia\app\Http\Controllers\ChatController.php(14): view('chat/liaotian', Array)
+#4 [internal function]: App\Http\Controllers\ChatController->index()
+#5 D:\yueyixia\vendor\compiled.php(8287): call_user_func_array(Array, Array)
+#6 D:\yueyixia\vendor\compiled.php(8354): Illuminate\Routing\Controller->callAction('index', Array)
+#7 D:\yueyixia\vendor\compiled.php(8333): Illuminate\Routing\ControllerDispatcher->call(Object(App\Http\Controllers\ChatController), Object(Illuminate\Routing\Route), 'index')
+#8 [internal function]: Illuminate\Routing\ControllerDispatcher->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 D:\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#10 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#11 D:\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#12 D:\yueyixia\vendor\compiled.php(8334): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#13 D:\yueyixia\vendor\compiled.php(8320): Illuminate\Routing\ControllerDispatcher->callWithinStack(Object(App\Http\Controllers\ChatController), Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'index')
+#14 D:\yueyixia\vendor\compiled.php(7317): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'App\\Http\\Contro...', 'index')
+#15 D:\yueyixia\vendor\compiled.php(7288): Illuminate\Routing\Route->runWithCustomDispatcher(Object(Illuminate\Http\Request))
+#16 D:\yueyixia\vendor\compiled.php(6954): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#17 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 D:\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 D:\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#21 D:\yueyixia\vendor\compiled.php(6955): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#22 D:\yueyixia\vendor\compiled.php(6944): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#23 D:\yueyixia\vendor\compiled.php(6929): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#24 D:\yueyixia\vendor\compiled.php(1935): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#25 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#26 D:\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#27 D:\yueyixia\vendor\compiled.php(12083): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 D:\yueyixia\vendor\compiled.php(8944): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 D:\yueyixia\vendor\compiled.php(10785): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 D:\yueyixia\vendor\compiled.php(8944): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 D:\yueyixia\vendor\compiled.php(11789): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 D:\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#33 D:\yueyixia\vendor\compiled.php(11738): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#34 D:\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 D:\yueyixia\vendor\compiled.php(2478): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 D:\yueyixia\vendor\compiled.php(8944): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#37 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#38 D:\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#39 D:\yueyixia\vendor\compiled.php(1891): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#40 D:\yueyixia\vendor\compiled.php(1880): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#41 D:\yueyixia\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#42 {main}  
+[2016-03-25 23:52:54] local.ERROR: exception 'ErrorException' with message 'Undefined variable: view' in D:\yueyixia\storage\framework\views\7f7db352f84703223cfc704e58b1fafa:136
+Stack trace:
+#0 D:\yueyixia\storage\framework\views\7f7db352f84703223cfc704e58b1fafa(136): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', 'D:\\yueyixia\\sto...', 136, Array)
+#1 D:\yueyixia\vendor\compiled.php(13650): include('D:\\yueyixia\\sto...')
+#2 D:\yueyixia\vendor\compiled.php(13683): Illuminate\View\Engines\PhpEngine->evaluatePath('D:\\yueyixia\\sto...', Array)
+#3 D:\yueyixia\vendor\compiled.php(13523): Illuminate\View\Engines\CompilerEngine->get('D:\\yueyixia\\res...', Array)
+#4 D:\yueyixia\vendor\compiled.php(13510): Illuminate\View\View->getContents()
+#5 D:\yueyixia\vendor\compiled.php(13501): Illuminate\View\View->renderContents()
+#6 D:\yueyixia\vendor\compiled.php(14597): Illuminate\View\View->render()
+#7 D:\yueyixia\vendor\compiled.php(14126): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#8 D:\yueyixia\vendor\compiled.php(7154): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#9 D:\yueyixia\vendor\compiled.php(6954): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#10 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 D:\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#12 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#13 D:\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#14 D:\yueyixia\vendor\compiled.php(6955): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#15 D:\yueyixia\vendor\compiled.php(6944): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#16 D:\yueyixia\vendor\compiled.php(6929): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#17 D:\yueyixia\vendor\compiled.php(1935): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#18 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#19 D:\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#20 D:\yueyixia\vendor\compiled.php(12083): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 D:\yueyixia\vendor\compiled.php(8944): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#22 D:\yueyixia\vendor\compiled.php(10785): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#23 D:\yueyixia\vendor\compiled.php(8944): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 D:\yueyixia\vendor\compiled.php(11789): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 D:\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 D:\yueyixia\vendor\compiled.php(11738): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 D:\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 D:\yueyixia\vendor\compiled.php(2478): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 D:\yueyixia\vendor\compiled.php(8944): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 D:\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#32 D:\yueyixia\vendor\compiled.php(1891): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#33 D:\yueyixia\vendor\compiled.php(1880): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#34 D:\yueyixia\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#35 {main}
+
+Next exception 'ErrorException' with message 'Undefined variable: view (View: D:\yueyixia\resources\views\chat\index.blade.php)' in D:\yueyixia\storage\framework\views\7f7db352f84703223cfc704e58b1fafa:136
+Stack trace:
+#0 D:\yueyixia\vendor\compiled.php(13652): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(ErrorException), 1)
+#1 D:\yueyixia\vendor\compiled.php(13683): Illuminate\View\Engines\PhpEngine->evaluatePath('D:\\yueyixia\\sto...', Array)
+#2 D:\yueyixia\vendor\compiled.php(13523): Illuminate\View\Engines\CompilerEngine->get('D:\\yueyixia\\res...', Array)
+#3 D:\yueyixia\vendor\compiled.php(13510): Illuminate\View\View->getContents()
+#4 D:\yueyixia\vendor\compiled.php(13501): Illuminate\View\View->renderContents()
+#5 D:\yueyixia\vendor\compiled.php(14597): Illuminate\View\View->render()
+#6 D:\yueyixia\vendor\compiled.php(14126): Illuminate\Http\Response->setContent(Object(Illuminate\View\View))
+#7 D:\yueyixia\vendor\compiled.php(7154): Symfony\Component\HttpFoundation\Response->__construct(Object(Illuminate\View\View))
+#8 D:\yueyixia\vendor\compiled.php(6954): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), Object(Illuminate\View\View))
+#9 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 D:\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#11 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 D:\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#13 D:\yueyixia\vendor\compiled.php(6955): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#14 D:\yueyixia\vendor\compiled.php(6944): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#15 D:\yueyixia\vendor\compiled.php(6929): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#16 D:\yueyixia\vendor\compiled.php(1935): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#17 [internal function]: Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#18 D:\yueyixia\vendor\compiled.php(8952): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 D:\yueyixia\vendor\compiled.php(12083): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 D:\yueyixia\vendor\compiled.php(8944): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 D:\yueyixia\vendor\compiled.php(10785): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 D:\yueyixia\vendor\compiled.php(8944): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 D:\yueyixia\vendor\compiled.php(11789): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 D:\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 D:\yueyixia\vendor\compiled.php(11738): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 D:\yueyixia\vendor\compiled.php(8944): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 D:\yueyixia\vendor\compiled.php(2478): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 D:\yueyixia\vendor\compiled.php(8944): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 D:\yueyixia\vendor\compiled.php(8935): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#31 D:\yueyixia\vendor\compiled.php(1891): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#32 D:\yueyixia\vendor\compiled.php(1880): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#33 D:\yueyixia\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#34 {main}  

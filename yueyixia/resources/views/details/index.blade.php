@@ -17,10 +17,10 @@
     <meta content="authenticity_token" name="csrf-param">
 <meta content="7uHYYjiwDdIvV1R4RV1xaK9tDAthxJNmuRUBtoZJ+sg=" name="csrf-token">
     <!--[if lte IE 8]>
-      <link href="http://static03.fishtrip.cn/assets/ng/vdayu_ie-d2ceb5b6da55e49dfd3724d1479d219b.css" media="screen" rel="stylesheet" type="text/css" />
-      <script src="http://static03.fishtrip.cn/assets/ng/3rd/html5-083899362ed59cc279451ac430aa737d.js" type="text/javascript"></script>
-      <script src="https://cdn.jsdelivr.net/es5.shim/4.4.1/es5-shim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/es5.shim/4.4.1/es5-sham.min.js"></script>
+      <link href="css/assets/ng/vdayu_ie-d2ceb5b6da55e49dfd3724d1479d219b.css" media="screen" rel="stylesheet" type="text/css" />
+      <script src="js/assets/ng/3rd/html5-083899362ed59cc279451ac430aa737d.js" type="text/javascript"></script>
+      <script src="js/es5.shim/4.4.1/es5-shim.min.js"></script>
+      <script src="js/es5.shim/4.4.1/es5-sham.min.js"></script>
     <![endif]-->
 
       <link href="http://m.fishtrip.cn/houses/hm10111332671/rooms-9784302379.html" media="only screen and (max-width: 640px)" rel="alternate"><meta content="format=html5;url=http://m.fishtrip.cn/houses/hm10111332671/rooms-9784302379.html" name="mobile-agent">
@@ -57,7 +57,7 @@
 
   </head>
 
-  <body class="room-show-body">
+  <body class="room-show-body" onload="doc()">
     
 
  <?php
@@ -154,7 +154,7 @@
               <div class="slick-list"><div class="slick-track" style="opacity: 1; width: 3420px; -webkit-transform: translate3d(-570px, 0px, 0px);"><div class="rpslider__item slick-slide slick-cloned" data-slick-index="-1" style="width: 570px; display: block;">
                 <img alt="<?php echo $user['0']['vname']?>" class="rpslider__img" data-lazy="http://7o4zic.com5.z0.glb.qiniucdn.com/system/photo/20141227/e0b9db131581f4f799d27392bc9773f0013c9514.jpg" src="img/img/<?php echo $user['0']['vimg']?>" title="<?php echo $user['0']['vname']?>">
               </div><div class="rpslider__item slick-slide slick-active" data-slick-index="0" style="width: 570px; display: block;">
-                <img alt="<?php echo $user['0']['vname']?>" class="rpslider__img" src="./img/549782e278165af660934b2b34946511f644b3de.jpg" title="<?php echo $user['0']['vname']?>" style="opacity: 1;">
+                <img alt="<?php echo $user['0']['vname']?>" class="rpslider__img" src="img/img/<?php echo $user['0']['vimg']?>" title="<?php echo $user['0']['vname']?>" style="opacity: 1;">
               </div><div class="rpslider__item slick-slide" data-slick-index="1" style="width: 570px; display: block;">
                 <img alt="<?php echo $user['0']['vname']?>" class="rpslider__img" data-lazy="http://7o4zic.com5.z0.glb.qiniucdn.com/system/photo/20141227/fb2b482a533d51720b7157b616b5fd743786a196.jpg" src="./img/white-e3cabd42f8a195ea38f3c843866c8f0f(1).gif" title="<?php echo $user['0']['vname']?>">
               </div>
@@ -188,10 +188,19 @@
       </div>
 
       <div class="room-rates-block">
+          @if(empty($test))
         <h2 class="rrblock__title">
           看看大家怎么说?
           <br>
         </h2>
+          @else
+          <h2 class="rrblock__title">
+              我也说一句<br>
+          </h2>
+
+              <textarea name="cont" id="ncontent" rows="8" cols="60"></textarea><br>
+              <input type="button" value="评论" onclick="fun(<?php echo $narr[0]['oid']; ?>);">
+          @endif
         <div class="rrblock__content">
           
 <div class="house-rates">
@@ -210,11 +219,9 @@
         <div class="hritem__content">
           <p>
             <span class="hritem__content-stars">
+                @for($i=0;$i<$v['cc_level'];$i++)
               <span class="yicon-ng-small-full-star"></span>
-              <span class="yicon-ng-small-full-star"></span>
-              <span class="yicon-ng-small-full-star"></span>
-              <span class="yicon-ng-small-full-star"></span>
-              <span class="yicon-ng-small-full-star"></span>
+                @endfor
             </span>
           </p>
           <div>
@@ -287,11 +294,11 @@
           <div class="ripodesc__time room-info-page-order-time js-room-info-date-select">
               <span class="ripotime__title">出发时间</span>
               <span class="ripotime__checkin-time">
-                <input class="ripotime__checkin js-room-info-start-day" id="start_day" name="start_day" placeholder="出发日期" readonly="readonly" type="text" value="<?php echo date('Y-m-d')?>">
+                <input class="ripotime__checkin js-room-info-start-day" id="start_day" name="start_day" placeholder="出发日期" style="height: 30px" readonly="readonly" type="text" value="<?php echo date('Y-m-d')?>">
                   <?php $weekarray=array("日","一","二","三","四","五","六"); ?>
-                <span class="ripotime__wday js-room-info-date-wday">（<?php echo "星期".$weekarray[date("w")]; ?>）</span>
+                <span class="ripotime__wday js-room-info-date-wday" style="padding-top: 5px">（<?php echo "星期".$weekarray[date("w")]; ?>）</span>
               </span>
-              <span class="yicon-ng-calender ripotime__icon"></span>
+              <span class="yicon-ng-calender ripotime__icon" style="margin-top: 5px"></span>
               <span class="ripotime__checkout-time">
 
               </span>
@@ -370,131 +377,39 @@
   <div class="ripage__recommend">
     <div class="room-show-recommends">
       <h2 class="rsrecommends__title">
-        浏览了此景点的用户也浏览了
+        我看过的...
         <br>
       </h2>
       <div class="rsrecommends__content">
         <div class="recommend-room-list">
-            <div class="rrlist__item ">
-              <div class="recommend-room">
-  <div class="rroom__img">
-    <a href="http://www.fishtrip.cn/houses/hm10106671031/rooms-10088368450.html">
-      <img alt="清境依默独栋小木屋-六人主题新房" src="./img/room-145230600185770691.jpg" title="清境依默独栋小木屋-六人主题新房">
-</a>  </div>
-  <div class="rroom__content">
-    <div class="rroom__name">
-      <a href="http://www.fishtrip.cn/houses/hm10106671031/" title="清境依默独栋小木屋">清境依默独栋小...</a>
-      <br>
-      <a href="http://www.fishtrip.cn/houses/hm10106671031/rooms-10088368450.html">六人主题新房</a>
-    </div>
-    <div class="rroom__info">
-      双人床3张，可容纳6人
-      <br>
-      台湾清境农场
-    </div>
-    <div class="rroom__price">
-      ￥<em>1527</em>起/晚
-    </div>
-  </div>
-</div>
+            <?php
+                foreach($arr2 as $k=>$v){
+                    ?>
+                <div class="rrlist__item ">
+                    <div class="recommend-room">
+                        <div class="rroom__img">
+                            <a href="http://www.fishtrip.cn/houses/hm10106671031/rooms-10088368450.html">
+                                <img alt="<?php echo $v['vname']?>" src="./img/img/<?php echo $v['vimg']?>" title="<?php echo $v['vname']?>">
+                            </a>  </div>
+                        <div class="rroom__content">
+                            <div class="rroom__name">
+                                <a href="http://www.fishtrip.cn/houses/hm10106671031/" title="<?php echo $v['vname']?>"><?php echo $v['vname']?>...</a>
+                                <br>
+                                <a href="http://www.fishtrip.cn/houses/hm10106671031/rooms-10088368450.html"></a>
+                            </div>
+                            <div class="rroom__info">
+                                <?php echo $v['vplace']?>
+                            </div>
+                            <div class="rroom__price">
+                                ￥<em><?php echo $v['vstartprice']?></em>起/人
+                            </div>
+                        </div>
+                    </div>
 
-            </div>
-            <div class="rrlist__item ">
-              <div class="recommend-room">
-  <div class="rroom__img">
-    <a href="http://www.fishtrip.cn/houses/hm10106671031/rooms-9977110927.html">
-      <img alt="清境依默独栋小木屋-六人樓中樓新房" src="./img/room-14523060722143770.jpg" title="清境依默独栋小木屋-六人樓中樓新房">
-</a>  </div>
-  <div class="rroom__content">
-    <div class="rroom__name">
-      <a href="http://www.fishtrip.cn/houses/hm10106671031/" title="清境依默独栋小木屋">清境依默独栋小...</a>
-      <br>
-      <a href="http://www.fishtrip.cn/houses/hm10106671031/rooms-9977110927.html">六人樓中樓新房</a>
-    </div>
-    <div class="rroom__info">
-      双人床3张，可容纳6人
-      <br>
-      台湾清境农场
-    </div>
-    <div class="rroom__price">
-      ￥<em>1527</em>起/晚
-    </div>
-  </div>
-</div>
-
-            </div>
-            <div class="rrlist__item ">
-              <div class="recommend-room">
-  <div class="rroom__img">
-    <a href="http://www.fishtrip.cn/houses/hm10106671031/rooms-9930357196.html">
-      <img alt="清境依默独栋小木屋-十三人楼中楼" src="./img/room-145230867864117613.jpg" title="清境依默独栋小木屋-十三人楼中楼">
-</a>  </div>
-  <div class="rroom__content">
-    <div class="rroom__name">
-      <a href="http://www.fishtrip.cn/houses/hm10106671031/" title="清境依默独栋小木屋">清境依默独栋小...</a>
-      <br>
-      <a href="http://www.fishtrip.cn/houses/hm10106671031/rooms-9930357196.html">十三人楼中楼</a>
-    </div>
-    <div class="rroom__info">
-      双人床6张，单人床1张，可容纳13人
-      <br>
-      台湾清境农场
-    </div>
-    <div class="rroom__price">
-      ￥<em>2311</em>起/晚
-    </div>
-  </div>
-</div>
-
-            </div>
-            <div class="rrlist__item ">
-              <div class="recommend-room">
-  <div class="rroom__img">
-    <a href="http://www.fishtrip.cn/houses/hm10106671031/rooms-9548566537.html">
-      <img alt="清境依默独栋小木屋-十四人楼中楼" src="./img/room-145231065727627867.jpg" title="清境依默独栋小木屋-十四人楼中楼">
-</a>  </div>
-  <div class="rroom__content">
-    <div class="rroom__name">
-      <a href="http://www.fishtrip.cn/houses/hm10106671031/" title="清境依默独栋小木屋">清境依默独栋小...</a>
-      <br>
-      <a href="http://www.fishtrip.cn/houses/hm10106671031/rooms-9548566537.html">十四人楼中楼</a>
-    </div>
-    <div class="rroom__info">
-      双人床7张，可容纳14人
-      <br>
-      台湾清境农场
-    </div>
-    <div class="rroom__price">
-      ￥<em>2506</em>起/晚
-    </div>
-  </div>
-</div>
-
-            </div>
-            <div class="rrlist__item rrlist__item--last">
-              <div class="recommend-room">
-  <div class="rroom__img">
-    <a href="http://www.fishtrip.cn/houses/hm9392469101/rooms-10367828017.html">
-      <img alt="清境白熊屋民宿-白熊景观楼中楼六人房" src="./img/room-143859840471988288.JPG" title="清境白熊屋民宿-白熊景观楼中楼六人房">
-</a>  </div>
-  <div class="rroom__content">
-    <div class="rroom__name">
-      <a href="http://www.fishtrip.cn/houses/hm9392469101/" title="清境白熊屋民宿">清境白熊屋民宿</a>
-      <br>
-      <a href="http://www.fishtrip.cn/houses/hm9392469101/rooms-10367828017.html">白熊景观楼中楼六人房</a>
-    </div>
-    <div class="rroom__info">
-      双人床3张，可容纳6人
-      <br>
-      台湾清境农场
-    </div>
-    <div class="rroom__price">
-      ￥<em>1034</em>起/晚
-    </div>
-  </div>
-</div>
-
-            </div>
+                </div>
+            <?php
+                }
+            ?>
         </div>
       </div>
     </div>
@@ -666,11 +581,6 @@
   </div>
 </div>
 
-
-
-
-
-
 <div class="footer-advertise js-footer-advertise is-active">
   <a href="http://www.fishtrip.cn/articles/157-new-year-coupon" class="gtm-ad fadvertise__image" target="_blank"></a>
   <a href="javascript:void(0);" class="fadvertise__close js-footer-advertise-close gtm-ad-close" data-url="http://www.fishtrip.cn/hide_footer_advertise">
@@ -684,27 +594,10 @@
 
     <script src="./js/base.js_aio_8dfe3f4.js" type="text/javascript"></script>
     <script src="./js/common.js_aio_cdd2b44.js" type="text/javascript"></script><div id="react-sessions-modal" style="display: none"><div class="react-sessions react-sessions-modal" id="sessions-modal-root" data-reactid=".0"></div></div>
-
     <script src="./js/vdayu_v3-e6850c4b2d6cf420d92facf4a168e173.js" type="text/javascript"></script>
     <!--[if lte IE 9]>
       <script src="http://static04.fishtrip.cn/assets/ng/vdayu_ie-556e92d829dd48645eadf5768227720b.js" type="text/javascript"></script>
     <![endif]-->
-
-      <script type="text/javascript">
-    $(function(){
-      RoomInfo.init(
-        false,
-        '5',
-        '4',
-        '5',
-        '1',
-        '1',
-        '12',
-        '4'
-      );
-      HouseShow.init(14, 14, 0, '2PWdJzondtc');
-    })
-  </script>
       /*
         选择人数
       */
@@ -799,6 +692,36 @@
                           });
               })
           });
+          $(function(){
+              RoomInfo.init(
+                      true,
+                      '5',
+                      '4',
+                      '5',
+                      '1',
+                      '1',
+                      '12',
+                      '4'
+              );
+              HouseShow.init(14, 14, 0, '2PWdJzondtc');
+          })
+          function doc(){
+              var sum = $("#jid").val();
+              $.get("/page?id="+sum,
+                      function(data){
+                          //alert(data)
+                      })
+          }
       </script>
+  <script type="text/javascript">
+      function fun(id){
+          var con = $("#ncontent").val();
+          $.get("/addcon", { con: con,id:id },
+                  function(data){
+                      alert(data);
+                      location.href="/details?oid="+id;
+                  });
+      }
+  </script>
 
 </body></html>

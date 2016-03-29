@@ -2,6 +2,7 @@
 
 namespace spec\PhpSpec\Console;
 
+use PhpSpec\Console\Prompter;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use PhpSpec\Config\OptionsConfig;
@@ -12,7 +13,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class IOSpec extends ObjectBehavior
 {
-    function let(InputInterface $input, OutputInterface $output, DialogHelper $dialogHelper, OptionsConfig $config)
+    function let(InputInterface $input, OutputInterface $output, OptionsConfig $config, Prompter $prompter)
     {
         $input->isInteractive()->willReturn(true);
         $input->getOption('no-code-generation')->willReturn(false);
@@ -21,7 +22,7 @@ class IOSpec extends ObjectBehavior
         $config->isCodeGenerationEnabled()->willReturn(true);
         $config->isStopOnFailureEnabled()->willReturn(false);
 
-        $this->beConstructedWith($input, $output, $dialogHelper, $config);
+        $this->beConstructedWith($input, $output, $config, $prompter);
     }
 
     function it_has_io_interface()
@@ -178,5 +179,37 @@ class IOSpec extends ObjectBehavior
         $this->setConsoleWidth(75);
 
         $this->getBlockWidth()->shouldReturn(65);
+    }
+
+    function it_writes_a_message_about_broken_code(OutputInterface $output)
+    {
+        $message = 'Error message';
+        $output->writeln('<broken-bg>                                                            </broken-bg>')->shouldBeCalledTimes(2);
+        $output->writeln('<broken-bg>Error message                                               </broken-bg>')->shouldBeCalled();
+        $output->writeln('')->shouldBeCalled();
+
+        $this->writeBrokenCodeBlock($message);
+    }
+
+    function it_wraps_long_broken_message(OutputInterface $output)
+    {
+        $message = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pro maximus nulla eget libero rhoncus lacinia.';
+        $output->writeln('<broken-bg>                                                            </broken-bg>')->shouldBeCalledTimes(2);
+        $output->writeln('<broken-bg>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pro</broken-bg>')->shouldBeCalled();
+        $output->writeln('<broken-bg>maximus nulla eget libero rhoncus lacinia.                  </broken-bg>')->shouldBeCalled();
+        $output->writeln('')->shouldBeCalled();
+
+        $this->writeBrokenCodeBlock($message);
+    }
+
+    function it_indents_and_wraps_long_broken_message(OutputInterface $output)
+    {
+        $message = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin maximus nulla eget libero rhoncus lacinia.';
+        $output->writeln('<broken-bg>                                                            </broken-bg>')->shouldBeCalledTimes(2);
+        $output->writeln('<broken-bg>  Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </broken-bg>')->shouldBeCalled();
+        $output->writeln('<broken-bg>  Proin maximus nulla eget libero rhoncus lacinia.          </broken-bg>')->shouldBeCalled();
+        $output->writeln('')->shouldBeCalled();
+
+        $this->writeBrokenCodeBlock($message, 2);
     }
 }

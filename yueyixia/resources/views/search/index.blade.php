@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta name="author" content="webmaster@fishtrip.cn">
-    <title>阿里山民宿预订_阿里山酒店预订_阿里山特色住宿预订 - 大鱼自助游</title>
+    <title>约一下从交友旅游开始体验世界</title>
 <meta content="大鱼为您精选热门的阿里山民宿和阿里山酒店, 并提供在线预订以及在线支付；部分住宿提供闪订，实时确认，100%有房不改价。" name="description">
 <meta content="阿里山民宿, 阿里山特色住宿, 阿里山民宿预订, 阿里山酒店预订, 阿里山民宿推荐, 阿里山酒店推荐" name="keywords">
 
@@ -70,13 +70,13 @@
   <div class="nhfilter__items">
 
     <ul class="nhfilter__item js_houses_filter_datepicker_group js_houses_filter_date_select">
-	  <label>优惠景点</label>
-      <!--<li class="nhfilter__item-title">
+	  //<label>优惠景点</label>
+      <li class="nhfilter__item-title">
         <label>日期</label>
       </li>
       <li>
         <span class="hdatepicker__selector">
-          <input class="hdatepicker__input house_filter_start_day js_house_index_datepicker_input" id="start_day" name="start_day" placeholder="入住日期" readonly="readonly" type="text">
+          <input class="hdatepicker__input house_filter_start_day js_house_index_datepicker_input" id="start_day" name="start_day" placeholder="入住日期" style="height: 25px" readonly="readonly" type="text">
           <span class="hdatepicker__weekday js_house_index_datepicker_weekday">
           </span>
           <span class="yicon-ng-calender hdatepicker__calender js_house_show_datepicker_calender"></span>
@@ -87,7 +87,7 @@
       </li>
       <li>
         <span class="hdatepicker__selector">
-          <input class="hdatepicker__input house_filter_end_day js_house_index_datepicker_input" id="end_day" name="end_day" placeholder="离开日期" readonly="readonly" type="text">
+          <input class="hdatepicker__input house_filter_end_day js_house_index_datepicker_input" id="end_day" name="end_day" placeholder="离开日期" style="height: 25px" readonly="readonly" type="text">
           <span class="hdatepicker__weekday js_house_index_datepicker_weekday">
           </span>
           <span class="yicon-ng-calender hdatepicker__calender js_house_show_datepicker_calender"></span>
@@ -98,13 +98,13 @@
           <input disabled="disabled" class="js_houses_filter_option_only_flash" id="confirm_response" name="confirm_response" value="1" type="checkbox">
           <span data-original-title="选择左侧日期后&lt;br/&gt;查看闪定房源" class="js_houses_flash_condition_tooltip" title="" data-placement="top">
             <span class="yicon-flash-yellow nhfilter__item-disable"></span>
-            <label class="js_houses_flash_lable nhfilter__item-disable" for="confirm_response">只看闪订,保证有房</label>
+            <label class="js_houses_flash_lable nhfilter__item-disable" for="confirm_response">只看闪订,保证有票</label>
           </span>
           <span data-original-title="100%有房不改价,&lt;br/&gt;需在30分钟内支付" class="js_houses_flash_tooltip" data-placement="top" title="">
             <span class="yicon-tips-help"></span>
           </span>
         </div>
-      </li>-->
+      </li>
     </ul>
 
     <hr>
@@ -696,6 +696,7 @@
 	$(function(){
 		$(".money").click(function(){
 			//var money=$(this).val();
+			//var aid=$(".aid").val();
 			var money=$('input:radio[name="money"]:checked').val();
 			var vid_all="";
 			$("input[name='vid']:checked").each(function(){
@@ -705,6 +706,7 @@
 			//alert(vid_all);
 			newvid_all=vid_all.substr(1);
 			//alert(newvid_all);
+			//$.get("/check",{money:money,aid:aid,vid:newvid_all},function(date){
 			$.get("/check",{money:money,vid:newvid_all},function(date){
 				$(".house-items-list").html(date);
 			})

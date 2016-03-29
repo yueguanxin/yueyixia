@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta name="author" content="webmaster@fishtrip.cn">
-    <title>『大鱼自助游台湾民宿_大鱼日本民宿在线预订』大鱼境外特色|台湾|日本民宿预订推荐-大鱼从住宿开始体验世界</title>
+    <title>约一下从交友旅游开始体验世界</title>
 <meta content="新一代境外特色住宿在线预订平台大鱼自助游,上万家境外特色民宿,台湾民宿,日本民宿在线实时预订和在线预订推荐.立即登录大鱼自助游查询境外、台湾、日本民宿推荐、价格、图片、评论、路线、折扣等信息." name="description">
 <meta content="大鱼自助游台湾民宿,日本民宿在线预订,境外特色|台湾|日本民宿预订推荐,大鱼从住宿开始体验世界" name="keywords">
 
@@ -99,8 +99,8 @@ jQuery(document).ready(function($) {
     <div class="header__logo">
       <div class="navbar-logo">
   <h1 class="home-logo">
-    <a href="http://www.fishtrip.cn/">
-      <img alt="大鱼自助游" src="img/shouye/home-logo-blue.png" title="大鱼自助游">
+    <a href="/">
+      <img alt="大鱼自助游" src="img/shouye/yueyixia2.png" title="大鱼自助游">
 </a>  </h1>
 </div>
 
@@ -113,7 +113,7 @@ jQuery(document).ready(function($) {
     <a href="javascript:;" class="header__link js-show-app-modal" rel="nofollow"><i class="iconfont icon-iphone"></i>下载大鱼APP</a>
   </li>
   <li class="flist__item navbar-menu-hot">
-    <a href="http://www.fishtrip.cn/preferentials/" class="header__link" target="_blank">我的钱包</a>
+    <a href="/money" class="header__link" target="_blank">我的钱包</a>
   </li>
   <?php
 	if(empty(session('name'))){
@@ -127,12 +127,12 @@ jQuery(document).ready(function($) {
   <?php
 	}else{
   ?>
-    <li class="flist__item"><a href="http://www.fishtrip.cn/orders/my" class="header__link">订单</a></li>
+    <li class="flist__item"><a href="/myorder" class="header__link">订单</a></li>
   <li class="flist__item"><a href="/collection" class="header__link">收藏</a></li>
   <li class="flist__item">
     <div class="user-menu user_logged_in dropdown">
   <a class="umenu__button user-avatar dropdown-toggle header__link" data-toggle="dropdown">
-    <img alt="小鱼儿441243495号" class="uavatar__pic" src="img/shouye/avatar-default-small-2f53ef89faea912409d250f342324aba.png" height="36" width="36">
+    <img alt="约一下" class="uavatar__pic" src="img/userlogo/<?php echo session('uimg')?>" height="36" width="36">
 	
   
 
@@ -154,7 +154,7 @@ jQuery(document).ready(function($) {
     </li>
 
     <li>
-      <a href="http://www.fishtrip.cn/logout">退出</a>
+      <a href="logout">退出</a>
     </li>
   </ul>
 </div>
@@ -169,35 +169,41 @@ jQuery(document).ready(function($) {
           <a href="javascript:;" title="关闭" class="close">×</a>
           <h3>欢迎登录约一下</h3>
      </div>
-     <div class="theme-popbod dform">
+     <div class="theme-popbod dform" id='ol'>
            <form class="theme-signin" name="loginform" action="/login" method="post">
-                <ol>
-                     <li><h4>你必须先登录！</h4></li>
+                <ol >
+                   
                      <li><strong>用户名：</strong><input class="ipt" type="text" name="name"  size="20" /></li>
                      <li><strong>密码：</strong><input class="ipt" type="password" name="pwd"  size="20" /></li>
 						<input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>" />
-                     <li><input class="btn btn-primary" type="submit" name="submit" value=" 登 录 " /></li>
-					 <li>使用第三方登陆</li>
+						<li><strong>验证码：</strong><input type="text" name="captcha" class="ipt1" >
+						<a onclick="javascript:re_captcha();" >
+						<img src="<?php echo e(URL('/yanzhengma/1')); ?>"  alt="验证码" title="刷新图片" width="100" height="40" id="c2c98f0de5a04167a9e427d883690ff6" border="0"></a> 
+						</li>
+                     <li><a href="javascript:void(0);" onclick='wang()'>忘记密码？</a><input class="btn btn-primary" type="submit" name="submit" value=" 登 录 " /></li>
+					
 					 <!-- 授权按钮 -->
 				<li><a  href="<?=$code_url?>"><img src="img/weibo.png" title="点击进入授权页面" alt="点击进入授权页面" border="0" /></a>
 					 <a href="#" onclick='toQzoneLogin()'><img src="img/qq.png"></a>
 				</li>
-
-<input type="text" name="captcha" class="form-control" style="width: 300px;"> 
-<a onclick="javascript:re_captcha();" >
-<img src="<?php echo e(URL('/yanzhengma/1')); ?>"  alt="验证码" title="刷新图片" width="100" height="40" id="c2c98f0de5a04167a9e427d883690ff6" border="0"></a> 
-<script>  
-  function re_captcha() {
-    $url = "<?php echo e(URL('/yanzhengma')); ?>";
-        $url = $url + "/" + Math.random();
-        document.getElementById('c2c98f0de5a04167a9e427d883690ff6').src=$url;
-  }
-</script>
                 </ol>
            </form>
      </div>
 </div>
  <script type="text/javascript">
+
+ //忘记密码
+ function wang(){
+	$('#ol').html('<form class="theme-signin" name="loginform" action="wang_pwd" method="post"><ol><li><h3>通过手机号登陆约一下</h3></li> <li><strong>手机号：</strong><input class="ipt" type="text" name="tel"  size="20" placeholder="请输入您的手机号" id="tel"/><span id="sp_tel"></span></li><li><input class="ipt" type="text"  size="15" placeholder="点击获取验证码" onblur="hq()" id="hq1"/><span id="sp_hq"></span> <div class="input-text" data-reactid=".1.1.1.1"><a href="javascript:;" class="input-link disabled" data-reactid=".1.1.1.1.0" onclick="get_mobile_code();">获取验证码</a></div> </li><li></li> <li><input class="btn btn-primary" type="submit" name="submit" value=" 登 录 " /></li></ol></form>');
+ }
+
+
+ //验证码
+   function re_captcha() {
+    $url = "<?php echo e(URL('/yanzhengma')); ?>";
+        $url = $url + "/" + Math.random();
+        document.getElementById('c2c98f0de5a04167a9e427d883690ff6').src=$url;
+  }
  //qq授权
 			  var childWindow;
             function toQzoneLogin()
@@ -213,17 +219,18 @@ jQuery(document).ready(function($) {
 	<!--登陆遮罩层结束-->
 	<!--注册开始-->
 	<div class="zhuce">
+	
      <div class="theme-poptit">
           <a href="javascript:;" title="关闭" class="close">×</a>
           <h3>欢迎注册约一下</h3>
      </div>
      <div class="theme-popbod dform">
            <form class="theme-signin" name="loginform" action="/register" method="post" onsubmit='fun()'>
-                <ol>
+                    <ol>
                      <li><h4>注册约一下！</h4></li>
                      <li><strong>手机号：</strong><input class="ipt" type="text" name="tel"  size="20" placeholder='请输入您的手机号' id='tel'/><span id='sp_tel'></span></li>
-					   <li><input class="ipt" type="text"  size="15" placeholder='点击获取验证码'/>
-					   <div class="input-text" data-reactid=".1.1.1.1"><a href="javascript:;" class="input-link disabled" data-reactid=".1.1.1.1.0">获取验证码</a></div>
+					   <li><input class="ipt" type="text"  size="15" placeholder='点击获取验证码' onblur="hq()" id='hq1'/><span id='sp_hq'></span>
+					   <div class="input-text" data-reactid=".1.1.1.1"><a href="javascript:;" class="input-link disabled" data-reactid=".1.1.1.1.0" onclick="get_mobile_code();">获取验证码</a></div>
 					   </li>
                      <li><strong>密码：</strong><input class="ipt" type="password" name="pwd"  size="20"  placeholder='请输入您的密码'  id='pwd'/><span id='sp_pwd'></span></li>
 						<input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>" />
@@ -233,7 +240,17 @@ jQuery(document).ready(function($) {
      </div>
 </div>
 <script type="text/javascript">
-	
+
+
+	//短信验证码
+		function get_mobile_code(){
+			tel=$('#tel').val();
+        $.get('sms', {mobile:tel}, function(msg) {
+            alert(jQuery.trim(unescape(msg)));
+        });
+	};
+
+
 	flag=0;
 	$("#login").click(function(){
 		//alert("111");
@@ -242,6 +259,25 @@ jQuery(document).ready(function($) {
 		}
 		return true;
 	})
+
+
+	//验证短信验证码
+	function hq(){
+		hq1=$('#hq1').attr('value');
+		$.get('sms',{hq1:hq1},function(data){
+			
+			if(data==1){
+				$('#sp_hq').html('ok');
+				flag=1;
+				return flag;
+			}else if(data==0){
+				$('#sp_hq').html('验证码错误！！！');
+				flag=0;
+				return flag;
+			}
+		});
+	}
+
 //验证手机号
 	$('#tel').blur(function(){
 		var tel=$('#tel').attr('value');
@@ -304,13 +340,13 @@ jQuery(document).ready(function($) {
     <div class="home-banner">
       <div class="hbanner__search home-search">
         <div class="hsearch__title">
-          从住宿开始体验世界
+          从交友旅游体验世界
         </div>
         <div class="hsearch__input">
           <div class="navbar-search navbar-search--home js-navbar-search">
   <form accept-charset="UTF-8" action="/search" class="nsearch__wrap nsearch__form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" value="✓" type="hidden"></div>
     <span class="nsearch__icon-pin yicon-place-pin-big"></span>
-    <input class="nsearch__text jnsearch__input" data-placeholder="搜索或选择目的地，预订特色住宿" id="q" name="q" value="搜索或选择目的地，预订特色住宿" type="text">
+    <input class="nsearch__text jnsearch__input" data-placeholder="搜索或选择目的地，购买景点门票" id="q" name="q" value="搜索或选择目的地，购买景点门票" type="text">
     <button class="nsearch__icon-search js-search-buton">
       <span class="yicon-search-index"></span>
 </button></form>  <div class="nsearch__selector">
@@ -349,8 +385,8 @@ jQuery(document).ready(function($) {
   <li class="flist__item">
     <a href="http://www.fishtrip.cn/collections/" class="header__link" target="_blank">大家喜欢</a>
   </li>
-  <li class="flist__item"><a href="http://www.fishtrip.cn/hunter/" class="header__link" target="_blank">大鱼旅行猎人</a></li>
-  <li class="flist__item"><a href="http://www.fishtrip.cn/shareholder/" class="header__link" target="_blank">大鱼股东计划</a></li>
+  <li class="flist__item"><a href="feedback" class="header__link" target="_blank">旅行猎人</a></li>
+  <li class="flist__item"><a href="http://www.fishtrip.cn/shareholder/" class="header__link" target="_blank">约一下股东计划</a></li>
 </ul>
 
         </div>
@@ -358,16 +394,9 @@ jQuery(document).ready(function($) {
     </div>
 
     <div class="home-banner-tips">
-      <span class="yicon-place-pin-white"></span>
-      <a href="http://www.fishtrip.cn/taiwan/kending/" class="hbtips__name" target="_blank">
-        <span>垦丁</span>
-</a>      <span class="hbtips__desc">
-        的民宿
-        <a href="http://www.fishtrip.cn/houses/hm10436013145/" class="hbtips__name" target="_blank">
-          <span>垦丁21.5主题民宿</span>
-</a>      </span>
+      <span class="yicon-place-pin-white"></span>     
       <span class="hbtips__from">
-        图片来自：大鱼股东 老狼
+        图片来自：约一下大股东 岳冠新，<font color="red">刘亚丹</font>，吕慧峰，赵杰
       </span>
       <a href="http://www.fishtrip.cn/articles/777-looking-for-photos-for-the-cover-of-fishtrip/" target="_blank">
         <div class="hbtips__price">
@@ -377,18 +406,24 @@ jQuery(document).ready(function($) {
   </div>
 
   <div class="hpage__container">
+ <!----每日特惠----->
       <div class="hpage__daily-discount home-section">
         <div class="hsection__title home-section-title hsection__title--daily-discount">
           <h2>每日特惠</h2>
+		  
           <span class="hstitle__tips js-daily-discount-tips">每日早10点上新</span>
         </div>
 
         <div class="hsection__content fishui-layout-triple js-daily-discount-items">
+		<!---特惠循环-->
+		  <?php
+			foreach($view as $vk=>$vv){
+		  ?>
             <div class="fltriple__item ">
     <div class="home-daily-discount-card">
       <div class="hddcard__img daily-discount-img">
-        <a href="http://www.fishtrip.cn/houses/hm9569497944/" class="ddimg__link" target="_blank">
-          <img alt="九份金瓜石101" src="img/shouye/house-145826730944979411.jpg" title="九份金瓜石101" height="330">
+        <a href="/details?vid=<?php echo $vv['vid']?>" class="ddimg__link" target="_blank">
+          <img alt="九份金瓜石101" src="img/img/<?php echo $vv['vimg']?>" title="九份金瓜石101" height="330">
 </a>
           <div class="ddimg__discount-tag discount-tag">
             <span class="dtag__text">每日特惠</span> &nbsp;<span class="dtag__rate">7.9</span><span class="dtag__text">折</span>
@@ -396,18 +431,18 @@ jQuery(document).ready(function($) {
       </div>
       <ul class="hddcard__info daily-discount-info">
         <li class="ddinfo__title">
-          <a href="http://www.fishtrip.cn/houses/hm9569497944/" target="_blank">九份金瓜石101</a>
+          <a href="/details?vid=<?php echo $vv['vid']?>" target="_blank"><?php echo $vv['vname']?></a>
           <div class="pull-right ddinfo__title--price">
-            <span class="ddinfo__title--small">¥</span> <span class="ddinfo__title--big">417</span><span class="ddinfo__title--small">起</span>
+            <span class="ddinfo__title--small">¥</span> <span class="ddinfo__title--big"><?php echo $vv['vstartprice']?></span><span class="ddinfo__title--small">起</span>
           </div>
         </li>
         <li class="ddinfo__desc">
-          四星级标准，远离喧嚣，服务品质高
+          <?php echo $vv['vplace']?>
           <div class="ddinfo__desc--line-through pull-right">¥529</div>
         </li>
         <li class="ddinfo__other">
           <span class="yicon-place-pin"></span>
-          台湾 九份
+          北京 西城
               <div class="pull-right daily-discount-time">
                 仅剩7单 &nbsp;&nbsp;
                 距结束<span class="ddtime__countdown js-home-daily-countdown" data-remaining_second="81302">21:11:15</span>
@@ -418,79 +453,14 @@ jQuery(document).ready(function($) {
 
     </div>
   </div>
-  <div class="fltriple__item ">
-    <div class="home-daily-discount-card">
-      <div class="hddcard__img daily-discount-img">
-        <a href="http://www.fishtrip.cn/houses/hm10111332671/" class="ddimg__link" target="_blank">
-          <img alt="波斯菊乐活馆" src="img/shouye/41712e8a8acdc297e3402f228e20e14bfdd72d6e.jpg" title="波斯菊乐活馆" height="330">
-</a>
-          <div class="ddimg__discount-tag discount-tag">
-            <span class="dtag__text">每日特惠</span> &nbsp;<span class="dtag__rate">7.9</span><span class="dtag__text">折</span>
-          </div>
-      </div>
-      <ul class="hddcard__info daily-discount-info">
-        <li class="ddinfo__title">
-          <a href="http://www.fishtrip.cn/houses/hm10111332671/" target="_blank">波斯菊乐活馆</a>
-          <div class="pull-right ddinfo__title--price">
-            <span class="ddinfo__title--small">¥</span> <span class="ddinfo__title--big">216</span><span class="ddinfo__title--small">起</span>
-          </div>
-        </li>
-        <li class="ddinfo__desc">
-          干净舒服的住宿空间，老板热情好客
-          <div class="ddinfo__desc--line-through pull-right">¥274</div>
-        </li>
-        <li class="ddinfo__other">
-          <span class="yicon-place-pin"></span>
-          台湾 花莲
-              <div class="pull-right daily-discount-time">
-                仅剩5单 &nbsp;&nbsp;
-                距结束<span class="ddtime__countdown js-home-daily-countdown" data-remaining_second="81302">21:11:15</span>
-              </div>
-
-        </li>
-      </ul>
-
-    </div>
-  </div>
-  <div class="fltriple__item fltriple__item--last">
-    <div class="home-daily-discount-card">
-      <div class="hddcard__img daily-discount-img">
-        <a href="http://www.fishtrip.cn/houses/hm9410167656/" class="ddimg__link" target="_blank">
-          <img alt="花莲东方之星民宿" src="img/shouye/house-145760829123949356.jpg" title="花莲东方之星民宿" height="330">
-</a>
-          <div class="ddimg__discount-tag discount-tag">
-            <span class="dtag__text">每日特惠</span> &nbsp;<span class="dtag__rate">7.9</span><span class="dtag__text">折</span>
-          </div>
-      </div>
-      <ul class="hddcard__info daily-discount-info">
-        <li class="ddinfo__title">
-          <a href="http://www.fishtrip.cn/houses/hm9410167656/" target="_blank">花莲东方之星民宿</a>
-          <div class="pull-right ddinfo__title--price">
-            <span class="ddinfo__title--small">¥</span> <span class="ddinfo__title--big">247</span><span class="ddinfo__title--small">起</span>
-          </div>
-        </li>
-        <li class="ddinfo__desc">
-          车站10分车程，紧邻夜市，提供早餐
-          <div class="ddinfo__desc--line-through pull-right">¥313</div>
-        </li>
-        <li class="ddinfo__other">
-          <span class="yicon-place-pin"></span>
-          台湾 花莲
-              <div class="pull-right daily-discount-time">
-                仅剩7单 &nbsp;&nbsp;
-                距结束<span class="ddtime__countdown js-home-daily-countdown" data-remaining_second="81302">21:11:15</span>
-              </div>
-
-        </li>
-      </ul>
-
-    </div>
-  </div>
-
+ <?php
+	}
+?>
+<!---特惠循环结束--->
         </div>
 
       </div>
-
+<!----每日特惠结尾--->
     <div class="hpage__ad home-ad-wrap home-section">
       <a href="http://www.fishtrip.cn/articles/801-learntobefishshareholder/" class="hawrap__left home-ad home-ad--rate" target="_blank">
 <!--         <div class="had__wrap">
@@ -520,63 +490,30 @@ jQuery(document).ready(function($) {
       </div>
 
       <div class="hsection__content fishui-layout-triple">
+	            <?php foreach($click as $v): ?>
           <div class="fltriple__item ">
             <div class="home-promo-card">
   <div class="hpcard__img">
-    <a href="http://www.fishtrip.cn/collections/2582-changdayeyaohaohaowanshui/" target="_blank">
-      <img alt="长大也要好好玩水" src="img/shouye/material-145698094712410550.jpg" title="大鱼-长大也要好好玩水" height="330" width="370">
+    <a href="/details?vid=<?php echo e($v['vid']); ?>" target="_blank">
+      <img alt="<?php echo e($v['vname']); ?>" src="img/img/<?php echo e($v['vimg']); ?>" title="<?php echo e($v['vname']); ?>" height="330" width="370">
 </a>  </div>
   <div class="hpcard__title">
-    <a href="http://www.fishtrip.cn/collections/2582-changdayeyaohaohaowanshui/" target="_blank">长大也要好好玩水</a>
+    <a href="/details?vid=<?php echo e($v['vid']); ?>" target="_blank"><?php echo e($v['vname']); ?></a>
   </div>
   <div class="hpcard__desc">
-    泼水节又来啦，去泰国打水仗吧！
+    点击量<?php echo e($v['vclick']); ?>
+
   </div>
   <div class="hpcard__location">
     <span class="yicon-place-pin"></span>
-    泰国
+     <?php echo e($v['vplace']); ?>
+
   </div>
 </div>
 
           </div>
-          <div class="fltriple__item ">
-            <div class="home-promo-card">
-  <div class="hpcard__img">
-    <a href="http://www.fishtrip.cn/collections/2480-qingmingqutaibei-huainenzenmewan/" target="_blank">
-      <img alt="四月春浪 摇滚台北！" src="img/shouye/material-145631365860824424.jpg" title="大鱼-四月春浪 摇滚台北！" height="330" width="370">
-</a>  </div>
-  <div class="hpcard__title">
-    <a href="http://www.fishtrip.cn/collections/2480-qingmingqutaibei-huainenzenmewan/" target="_blank">四月春浪 摇滚台北！</a>
-  </div>
-  <div class="hpcard__desc">
-    春天里的第一场音乐节
-  </div>
-  <div class="hpcard__location">
-    <span class="yicon-place-pin"></span>
-    台湾
-  </div>
-</div>
-
-          </div>
-          <div class="fltriple__item fltriple__item--last">
-            <div class="home-promo-card">
-  <div class="hpcard__img">
-    <a href="http://www.fishtrip.cn/collections/139-shuangchenggushi-duoqingmangu-wenyiqingmai/" target="_blank">
-      <img alt="萨瓦迪卡，跟泰国Say Hi" src="img/shouye/material-145328437766626255.jpg" title="大鱼-萨瓦迪卡，跟泰国Say Hi" height="330" width="370">
-</a>  </div>
-  <div class="hpcard__title">
-    <a href="http://www.fishtrip.cn/collections/139-shuangchenggushi-duoqingmangu-wenyiqingmai/" target="_blank">萨瓦迪卡，跟泰国Say Hi</a>
-  </div>
-  <div class="hpcard__desc">
-    曼谷，清迈和普吉 | 甄选更丰富的泰国
-  </div>
-  <div class="hpcard__location">
-    <span class="yicon-place-pin"></span>
-    泰国
-  </div>
-</div>
-
-          </div>
+		    <?php endforeach; ?>
+         
       </div>
     </div>
 

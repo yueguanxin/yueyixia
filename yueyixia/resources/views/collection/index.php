@@ -70,7 +70,7 @@
   <div class="row">
     <div class="span12 favorites-list my_favorites_list">
       <div class="status">
-        收藏(1)
+        收藏(<?php echo count($collection);?>)
       </div>
       <div class="list">
 

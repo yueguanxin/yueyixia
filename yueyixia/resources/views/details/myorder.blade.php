@@ -2,7 +2,42 @@
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>我的收藏 - 大鱼自助游</title>
+    <title>我的订单</title>
+    <style>
+        *{ margin:0; padding:0; list-style:none; text-decoration:none;}
+        /* 代码整理：懒人之家 www.lanrenzhijia.com */
+        /* 正文 */
+        .wraper{ width:700px; padding-top:0px; margin:0 auto}
+        .nav{ position:relative; width:100%; background:#C70757; overflow:hidden}
+        .nav-item{ position:relative; float:left; width:120px; height:40px; line-height:40px; text-align:center; font-size:14px; z-index:1}
+        .nav-item a{ display:block; height:40px; color:#fff;}
+        .nav-item a:hover{ color:#fff;}
+        .move-bg{ display:none;position:absolute;left:0;top:0; width:120px; height:40px; background:#4D0B33; z-index:0}
+        table.hovertable {
+            font-family: verdana,arial,sans-serif;
+            font-size:11px;
+            color:#333333;
+            border-width: 1px;
+            border-color: #999999;
+            border-collapse: collapse;
+        }
+        table.hovertable th {
+            background-color:#c3dde0;
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #a9c6c9;
+        }
+        table.hovertable tr {
+            background-color:#d4e3e5;
+        }
+        table.hovertable td {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #a9c6c9;
+        }
+    </style>
     <meta name="author" content="webmaster@fishtrip.cn">
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta name="viewport" content="width=device-width">
@@ -24,7 +59,10 @@
     <![endif]-->
 
     
-    <script src="%E6%88%91%E7%9A%84%E6%94%B6%E8%97%8F%20-%20%E5%A4%A7%E9%B1%BC%E8%87%AA%E5%8A%A9%E6%B8%B8_files/v.htm" charset="utf-8"></script><script src="js/ec.js" async="" type="text/javascript"></script><script src="js/tracker_ex.js" async=""></script><script src="js/tracker.js" async=""></script><script src="js/analytics.js" async=""></script><script src="js/hm.js"></script><script type="text/javascript">
+    <script src="%E6%88%91%E7%9A%84%E6%94%B6%E8%97%8F%20-%20%E5%A4%A7%E9%B1%BC%E8%87%AA%E5%8A%A9%E6%B8%B8_files/v.htm" charset="utf-8"></script><script src="js/ec.js" async="" type="text/javascript"></script>
+    <script src="js/tracker_ex.js" async=""></script><script src="js/tracker.js" async=""></script><script src="js/analytics.js" async=""></script><script src="js/hm.js"></script>
+    <script src="js/jquery.movebg.js"></script>
+    <script type="text/javascript">
   var _hmt = _hmt || [];
   (function() {
     var hm = document.createElement("script");
@@ -66,64 +104,44 @@
     <div class="container page-container">
       
 <div class="my-favorites-page">
-  <h1>我的订单</h1>
+    <div class="status">
   <div class="row">
-    <div class="span12 favorites-list my_favorites_list">
-      <div class="status">
-        收藏(<?php echo count($arr);?>)
+      <div class="list" style="float:left;">
+          <div class="wraper">
+              <div class="nav">
+                  <ul>
+                      <li class="nav-item"><a href='javascript:(void)' id="all">所有订单(<?php echo count($arr);?>)</a></li>
+                      <li class="nav-item"><a href='javascript:(void)' id="npay">代付款</a></li>
+                      <li class="nav-item"><a href='javascript:(void)' id="nform">代发货</a></li>
+                      <li class="nav-item"><a href='javascript:(void)' id="ninfo">待收货</a></li>
+                      <li class="nav-item"><a href='javascript:(void)' id="ncon">待评论</a></li>
+                  </ul>
+                  <!--移动的滑动-->
+                  <div class="move-bg"></div>
+                  <!--移动的滑动 end-->
+              </div></div>
+              <!--收藏循环开始--->
+              <div style="width: 800px" id="place">
+                  <table class="hovertable">
+                      <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';"><td width="200px">订单号</td><td width="90px">金额</td><td width="400px">景点地址</td><td width="200px" style="padding-left: 100px">其它</td></tr>
+                  <?php
+                  foreach($arr as $ck=>$cv){
+                  ?>
+                  <div class="item clearfix favorite_194348">
+                      <!-- 参数： target, title, price, (location或path) desc_topic, desc_content -->
+
+                         <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';"><td><?php echo $cv['oname'];?></td><td>¥ <?php echo $cv['omoney']?>元</td><td> <?php echo $cv['vplace']?></td><td> <a href="/lists?oname=<?php echo $cv['oname'];?>" style="float: right">查看详情</a>
+                                 <a href="javascript:(void)" onclick="fun(<?php echo $cv['oid'];?>);" class="my_favorite_delete_cmd" style="float: right;margin-right: 20px" >删除</a></td></tr>
+
+                  </div>
+                  <?php
+                  }
+                  ?>
+                  </table>
+                          <!--收藏循环结尾--->
+              </div>
+
       </div>
-      <div class="list">
-
-<!--收藏循环开始--->
-<?php
-	foreach($arr as $ck=>$cv){
-?>
-	<div class="item clearfix favorite_194348">
-
-<!-- 参数 category, photo_path, target -->
-
-<div class="photo house favorite-photo-item">
-    <a href="http://www.fishtrip.cn/houses/NM00LEqd5ms" class="fpitem__link" target="_blank"><img alt="2a35bd421b3a918ed1135046321fef5b4cf382ca" src="img/img/<?php echo $cv['vimg']?>"></a>
-</div>
-
-
-
-<!-- 参数： target, title, price, (location或path) desc_topic, desc_content -->
-
-<div class="info">
-    <div class="price">
-      <span class="num">¥ <?php echo $cv['omoney']?></span>
-      <span class="unit">元</span>
-    </div>
-
-    <div class="title">
-        <a href="http://www.fishtrip.cn/houses/NM00LEqd5ms" target="_blank"><?php echo $cv['oname']?></a>
-    </div>
-
-    <div class="loc">
-      <span class="yicon yicon-search-position"></span>
-      <?php echo $cv['vplace']?>
-    </div>
-
-
-    <div class="description">
-      <span class="topic"></span>
-
-    </div>
-    <a href="/lists?oname=<?php echo $cv['oname'];?>" style="float: right">查看详情</a>
-    <a href="javascript:(void)" onclick="fun(<?php echo $cv['oid'];?>);" class="my_favorite_delete_cmd" style="float: right;margin-right: 20px" >删除</a>
-</div>
-
-
-        </div>
-<?php
-	}
-?>
-
-<!--收藏循环结尾--->
-      </div>
-
-    </div>
 
     <div class="span4 pull-right">
       <div class="weixin_bar_code">
@@ -148,6 +166,7 @@
       </div>
     </div>
   </div>
+    </div>
 </div>
 
     </div>
@@ -360,5 +379,44 @@
         //处理请求
         ajax.send(null);
     }
+</script>
+<script src="js/jquery.movebg.js"></script>
+<script>
+    $(function(){
+        $(".nav").movebg({width:120/*滑块的大小*/,extra:40/*额外反弹的距离*/,speed:300/*滑块移动的速度*/,rebound_speed:400/*滑块反弹的速度*/});
+    })
+    $(document).ready(function(){
+        $("#all").on("click",function(){
+            $.get("/all",
+                    function(data){
+                        $("#place").html(data);
+             });
+        });
+        $("#npay").on("click",function(){
+			//alert("111");
+            $.get("/npay", { id: "1" },
+                function(data){
+                    $("#place").html(data);
+             });
+        });
+        $("#nform").on("click",function(){
+            $.get("/nform", { id: "0" },
+                    function(data){
+                        $("#place").html(data);
+                    });
+        });
+        $("#ninfo").on("click",function(){
+            $.get("/ninfo", { id: "2" },
+                    function(data){
+                        $("#place").html(data);
+                    });
+        });
+        $("#ncon").on("click",function(){
+            $.get("/ncon", { id: "3" },
+                    function(data){
+                        $("#place").html(data);
+                    });
+        });
+    })
 </script>
 </html>

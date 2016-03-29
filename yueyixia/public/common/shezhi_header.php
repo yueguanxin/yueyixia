@@ -100,8 +100,8 @@
   <ul>
     <li><a href="/edit" class="active">修改个人资料</a></li>
     <li><a href="/edit_avatar" class="">更改头像</a></li>
-    <li><a href="http://www.fishtrip.cn/user_contacts" class="">常用旅客</a></li>
-    <li><a href="http://www.fishtrip.cn/users/YSnm7EJrS0A/edit_bank" class="">更新银行信息</a></li>
+    <!--<li><a href="http://www.fishtrip.cn/user_contacts" class="">常用旅客</a></li>
+    <li><a href="http://www.fishtrip.cn/users/YSnm7EJrS0A/edit_bank" class="">更新银行信息</a></li>-->
       <li><a href="/edit_pwd" class="">修改密码</a></li>
     <li><a href="/edit_phone" class="">修改登录手机号</a></li>
     <li><a href="/edit_email" class="">绑定邮箱</a></li>
